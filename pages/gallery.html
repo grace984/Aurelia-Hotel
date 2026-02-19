@@ -95,6 +95,69 @@
         </div>
     </section>
 
+<main class="container py-5">
+
+    <!-- TITLE -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Gallery – Luxury in Every Corner</h2>
+        <p class="text-muted">A glimpse of elegance and comfort</p>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div id="hotelCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+
+            <div class="carousel-item active">
+                <img src="../images/room1.jpg" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+                <img src="../images/room2.jpg" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+                <img src="../images/event.jpg" class="d-block w-100">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- IMAGE GRID (10 IMAGES) -->
+    <div class="row g-4">
+
+        <!-- REPEAT THIS BLOCK FOR 10 IMAGES -->
+        <div class="col-md-4">
+            <img src="../images/room1.jpg" class="img-fluid gallery-img rounded shadow"
+                data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                onclick="showImage(this.src)">
+            <p class="text-center mt-2">Executive Suite</p>
+        </div>
+
+        <div class="col-md-4">
+            <img src="../images/restaurant.jpg" class="img-fluid gallery-img rounded shadow"
+                data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                onclick="showImage(this.src)">
+            <p class="text-center mt-2">Luxury Dining</p>
+        </div>
+
+        <div class="col-md-4">
+            <img src="../images/pool.jpg" class="img-fluid gallery-img rounded shadow"
+                data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                onclick="showImage(this.src)">
+            <p class="text-center mt-2">Infinity Pool View</p>
+        </div>
+
+    </div>
+
+</main>
 
 
 
@@ -148,6 +211,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+        <!-- LIGHTBOX MODAL -->
+<div class="modal fade" id="lightboxModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <img id="lightboxImage" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+<script>
+function showImage(src){
+    document.getElementById("lightboxImage").src = src;
+}
+</script>
+
 
 
 </body>
