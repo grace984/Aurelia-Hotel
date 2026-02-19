@@ -7,3 +7,11 @@
     flex: 1;
     justify-content: flex-end;
 }
+
+.navbar {
+    background: linear-gradient(to right, #C59D3E 0%, #F2ECE0 30%, #F2ECE0 75%, #C59D3E 100%);
+}
+
+.footer-section {
+    background: linear-gradient(to right, #f3d37b 38%, #e4bd64 88%);
+}
