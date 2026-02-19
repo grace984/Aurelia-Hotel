@@ -1,0 +1,8 @@
+.nav-left {
+    flex: 1;
+}
+
+.nav-right {
+    flex: 1;
+    justify-content: flex-end;
+}
