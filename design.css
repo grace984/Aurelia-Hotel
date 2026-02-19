@@ -35,3 +35,36 @@ main {
 body {
     font-family: 'Source Sans 3', sans-serif;
 }
+
+/* SERVICES PAGE */
+
+.services-box {
+    background: rgba(255, 248, 220, 0.8);
+    border-radius: 15px;
+}
+
+.services-box li {
+    padding: 10px 0;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.services-box li:hover {
+    color: #b68d40;
+    transform: translateX(8px);
+}
+
+.icon {
+    margin-right: 8px;
+    color: rgba(182, 141, 64, 0.9);
+}
+
+.gallery-img {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.gallery-img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
