@@ -14,4 +14,6 @@
 
 .footer-section {
     background: linear-gradient(to right, #f3d37b 38%, #e4bd64 88%);
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
 }
