@@ -35,3 +35,151 @@ main {
 body {
     font-family: 'Source Sans 3', sans-serif;
 }
+
+/* SERVICES */
+
+.services-section {
+    background-color: #FAFBFC;
+}
+
+/* Title */
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+/* LEFT MENU */
+.services-menu {
+    background: #F5E6C8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.menu-title {
+    background: #C6A75E;
+    padding: 6px 15px;
+    display: inline-block;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.services-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-menu li {
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.services-menu li:hover {
+    color: #C6A75E;
+    transform: translateX(8px);
+}
+
+/* SERVICE CARDS */
+.service-card {
+    display: flex;
+    align-items: center;
+    background: #F5E6C8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.card-content h5 {
+    font-weight: 600;
+}
+
+.review {
+    font-size: 14px;
+    color: rgba(0,0,0,0.6);
+}
+
+/* GALLERY HERO */
+.gallery-hero {
+    background: linear-gradient(to right, rgba(1,18,39,0.8), rgba(1,18,39,0.3)),
+    url('../images/banner.png');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+}
+
+.gallery-hero h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.gallery-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Carousel */
+.carousel-inner img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.custom-caption {
+    background: rgba(0,0,0,0.6);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* IMAGE GRID */
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-card img {
+    transition: 0.5s;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+/* GOLD OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(198,167,94,0.85);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: 0.4s;
+}
+
+.gallery-card:hover .overlay {
+    transform: translateY(0);
+}
