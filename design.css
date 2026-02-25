@@ -248,7 +248,7 @@ body {
 .story-paragraph {
     font-size: 26px;
     margin-top: 40px;   /* increase this for more top padding */
-    margin-left: -35px;egative value moves it left */
+    margin-left: -35px; /* negative value moves it left */
     margin-bottom: 10px !important;
 }
 
@@ -350,3 +350,29 @@ body {
 }
 
 /*home end*/
+
+
+/* FAQ */
+
+.collapsible summary {
+    background-color: #F2ECDD; /* Background for the always-visible part */
+    border: 5px solid #f5cb5c;
+    cursor: pointer; /* Remove pointer cursor */
+    padding: 10px;
+    font-size: 19px;
+    margin: 15px;
+    border-radius: 15px;
+    
+    
+  }
+  .collapsible p {
+    background-color: #F2ECDD; /* Background for the collapsible content */
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .scroll-box {
+  height: 300px;
+  overflow-y: scroll;
+  border: 0px solid black;
+}
