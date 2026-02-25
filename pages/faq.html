@@ -79,8 +79,9 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <section>
-        <div class="container-fluid bsb-hero-6" style="background-image: linear-gradient(to right, rgba(1, 18, 39, 0.63), rgba(0,35,77,0)), url('../images/banner.png');
+        <div class="container-fluid bsb-hero-6" style="background-image: linear-gradient(to right, rgba(1, 18, 39, 0.63), rgba(0,35,77,0)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Restaurant_room_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg/640px-Restaurant_room_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg');
             background-size: cover;
             background-position: center;
             min-height: 500px;
@@ -98,25 +99,128 @@
     <!-- MAIN CONTENT (placeholder) -->
     <main>
         <!-- TODO: Team member adds placeholder content for this page -->
-        <h2>FAQ'S & POLICIES</h2>
-        <p>Content goes here...</p>
+        <h1 class="text-center mt-5 mb-4">FAQ'S & POLICIES</h1>
+        <!-- For paragraphs  -->
+        <div class="container mt-4 mb-5">
+            <div class="story-wrapper">
+                <div class="story-title">FAQ Accordion</div>
+                <div class="story-card">
+                    <div class="scroll-box"> 
+                        <details class="collapsible">
+                            <summary>FAQ Accordion</summary>
+                            <div class="mb-0 text-muted">
+                            <p>This content has a separate background</p>
+                        </details>
+                        <details class="collapsible">
+                            <summary>FAQ Accordion</summary>
+                                <div class="mb-0 text-muted">
+                                <p>This content has a separate background color.</p>
+                        </details>
+                        <details class="collapsible">
+                            <summary>FAQ Accordion</summary>
+                                <div class="mb-0 text-muted">
+                                <p>This content has a separate background color.</p>
+                        </details>
+                        <details class="collapsible">
+                            <summary>FAQ Accordion</summary>
+                                <div class="mb-0 text-muted">
+                                <p>This content has a separate background color.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div>
+ 
+
+
+        <!-- For lists -->
+        <div class="container mt-4 mb-5">
+            <div class="story-wrapper">
+                <div class="story-title">Policy Tables</div>
+                <div class="story-card">
+                    <ul class="mb-0 text-muted">
+                        <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+    <thead>
+    <tr style="color: #0b0b0b;">
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Policy</th>
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Details</th>
+    </tr>
+    </thead>
+  <tbody>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 12px; border: 1px solid #ddd;">Check-in Time</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">From 2:00 PM</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #ddd;">Check-out Time</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">Until 11:00 AM</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 12px; border: 1px solid #ddd;">Cancellation Policy</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">Free cancellation up to 24 hours before arrival</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #ddd;">Payment Methods</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">Credit cards, debit cards, cash</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 12px; border: 1px solid #ddd;">Pets</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">Not allowed, unless well trained, well groomed, and approved by management</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #ddd;">Smoking</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">Prohibited in all rooms and public areas. There are designated areas for smoking</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 12px; border: 1px solid #ddd;">Children Policy</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">Children under 12 stay free with existing bedding. Children under 7 years old need supervision by the pool
+      </td>
+    </tr>
+  </tbody>
+                        </table>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
         <style>
-  .my-details summary {
-    background-color: #F5CB5C; /* Background for the always-visible part */
-    cursor: pointer;
+
+            
+  .collapsible summary {
+    background-color: #F2ECDD; /* Background for the always-visible part */
+    border: 5px solid #f5cb5c;
+    cursor: pointer; /* Remove pointer cursor */
     padding: 10px;
+    font-size: 19px;
+    margin: 15px;
+    border-radius: 15px;
+    
+    
   }
-  .my-details p {
+  .collapsible p {
     background-color: #F2ECDD; /* Background for the collapsible content */
     padding: 10px;
-    margin: 0;
+    margin: 10px;
+    border-outli
   }
+
+  .scroll-box {
+  height: 300px;
+  overflow-y: scroll;
+  border: 0px solid black;
+}
+
+  .arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
 </style>
 
-<details class="my-details">
-  <summary>FAQ Accordion</summary>
-  <p>This content has a separate background color.</p>
-</details>
 
     </main>
 
