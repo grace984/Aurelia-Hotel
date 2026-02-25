@@ -221,13 +221,13 @@ body {
 }
 
 
+
 /* about us photos */
 .section-img {
-    width: 310px;
-    height: 261px;
+    width: 310px !important;
+    height: 230px !important;
     object-fit: cover;
     max-width: 100%;
-    /* prevents overflow on small screens */
 }
 
 /* FOR SMALLER SCREENS CONTAINER */
