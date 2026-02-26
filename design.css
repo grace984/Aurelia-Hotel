@@ -363,7 +363,7 @@ body {
     margin: 15px;
     border-radius: 15px;
   }
-  .collapsible p {
+.collapsible p {
     background-color: #F2ECDD; /* Background for the collapsible content */
     padding: 5px;
     margin: 10px;
@@ -400,6 +400,8 @@ body {
 /* Makes long text wrap nicely */
 .custom-policy-table td {
   word-wrap: break-word;
+}
+
 
 /* Contact Page Styles */
         .contact-section {
