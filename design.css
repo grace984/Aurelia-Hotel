@@ -358,16 +358,17 @@ body {
     background-color: #F2ECDD; /* Background for the always-visible part */
     border: 5px solid #f5cb5c;
     cursor: pointer; /* Remove pointer cursor */
-    padding: 10px;
+    padding: 5px;
     font-size: 19px;
     margin: 15px;
     border-radius: 15px;
+   
     
     
   }
   .collapsible p {
     background-color: #F2ECDD; /* Background for the collapsible content */
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
   }
 
@@ -375,4 +376,31 @@ body {
   height: 300px;
   overflow-y: scroll;
   border: 0px solid black;
+}
+
+.custom-policy-table {
+  font-family:sans-serif;
+  border-collapse: collapse;
+}
+
+.custom-policy-table th,
+.custom-policy-table td {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.custom-policy-table thead th {
+  background-color: #ffffff;
+  color: #0b0b0b;
+  font-weight: 600;
+}
+
+.custom-policy-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Makes long text wrap nicely */
+.custom-policy-table td {
+  word-wrap: break-word;
 }
