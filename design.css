@@ -724,9 +724,9 @@ body {
 
 .form-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -795,6 +795,10 @@ body {
     outline: none;
     border-color: #d4a574;
     box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+}
+
+.form-input::placeholder {
+    color: #aaa;
 }
 
 
@@ -906,6 +910,7 @@ body {
     margin-right: 8px;
 }
 
+/* Credit Card Form */
 .credit-card-form {
     background: #f8f6f3;
     padding: 20px;
@@ -913,20 +918,114 @@ body {
     margin-top: 15px;
 }
 
+.card-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 576px) {
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-input-wrapper {
+    position: relative;
+}
+
+.card-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d4a574;
+    font-size: 1.2rem;
+}
+
+.cvv-wrapper {
+    position: relative;
+}
+
+.cvv-help {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    cursor: help;
+}
+
+/* PayPal Form */
+.paypal-info {
+    background: #f8f6f3;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.paypal-logo {
+    font-size: 3rem;
+    color: #0070ba;
+    margin-bottom: 15px;
+}
+
+.paypal-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
 .paypal-btn {
-    width: 100%;
-    padding: 15px;
+    display: inline-block;
+    padding: 15px 40px;
     background: #0070ba;
     color: white;
     border: none;
     border-radius: 8px;
     font-weight: 600;
-    cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .paypal-btn:hover {
     background: #005ea6;
+    color: white;
+}
+
+
+/* ============================================
+   TERMS & CONDITIONS
+   ============================================ */
+.terms-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.checkbox-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #d4a574;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.terms-link {
+    color: #d4a574;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
 }
 
 
@@ -943,7 +1042,6 @@ body {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 25px;
     transition: all 0.3s ease;
 }
 
@@ -972,6 +1070,7 @@ body {
     display: block;
 }
 
+
 /* ============================================
    INFO SECTION (SIDEBAR)
    ============================================ */
@@ -980,6 +1079,7 @@ body {
     flex-direction: column;
     gap: 25px;
 }
+
 
 /* ============================================
    BOOKING SUMMARY CARD
@@ -1016,6 +1116,9 @@ body {
 
 .summary-item:last-child {
     border-bottom: none;
+}
+
+.summary-item.total-row {
     font-weight: 700;
     color: #d4a574;
     font-size: 1.1rem;
@@ -1032,6 +1135,7 @@ body {
     color: #333;
     font-weight: 500;
 }
+
 
 /* ============================================
    POLICY CARD
@@ -1072,6 +1176,8 @@ body {
     margin-top: 3px;
     flex-shrink: 0;
 }
+
+
 /* ============================================
    QUICK ACTION CARD
    ============================================ */
@@ -1119,6 +1225,84 @@ body {
     box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
 }
 
+
+/* ============================================
+   MODAL STYLES
+   ============================================ */
+.success-modal-content {
+    border: none;
+    border-radius: 16px;
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.success-modal-content .modal-title {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.modal-message {
+    color: #666;
+    font-size: 1rem;
+}
+
+.booking-details {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+
+.booking-detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0d5c7;
+}
+
+.booking-detail-item:last-child {
+    border-bottom: none;
+    font-weight: 700;
+    color: #d4a574;
+}
+
+.modal-btn {
+    padding: 12px 30px;
+    background: #c9a86c;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.modal-btn:hover {
+    background: #b8975a;
+}
+
+/* Error Modal */
+.error-modal-content {
+    border: none;
+    border-radius: 16px;
+}
+
+.error-icon {
+    font-size: 5rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+.error-modal-content .modal-title {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
 @media (max-width: 768px) {
     .form-card {
         padding: 25px;
@@ -1134,5 +1318,9 @@ body {
 
     .room-option {
         min-width: 100%;
+    }
+
+    .card-row {
+        grid-template-columns: 1fr;
     }
 }

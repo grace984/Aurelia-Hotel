@@ -135,6 +135,13 @@
                                 placeholder="Enter your email address" required>
                         </div>
 
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input"
+                                placeholder="Enter your phone number" required>
+                        </div>
+
                         <!-- Check-In / Check-Out Dates -->
                         <div class="form-group">
                             <div class="date-grid">
@@ -147,6 +154,30 @@
                                     <label for="checkOut" class="form-label">Check-Out</label>
                                     <input type="date" id="checkOut" name="checkOut" class="form-input" required>
                                     <small class="error-message" id="checkOutError"></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Number of Guests -->
+                        <div class="form-group">
+                            <div class="date-grid">
+                                <div>
+                                    <label for="adults" class="form-label">Adults</label>
+                                    <select id="adults" name="adults" class="form-input">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2" selected>2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="children" class="form-label">Children</label>
+                                    <select id="children" name="children" class="form-input">
+                                        <option value="0" selected>0 Children</option>
+                                        <option value="1">1 Child</option>
+                                        <option value="2">2 Children</option>
+                                        <option value="3">3 Children</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +203,7 @@
 
                                 <label class="room-option" data-room="presidential">
                                     <input type="radio" name="roomType" value="presidential" data-price="450">
-                                    <div class="room-type-name">Presidential</div>
+                                    <div class="room-type-name">Presidential Suite</div>
                                     <div class="room-type-price">$450/night</div>
                                     <div class="room-type-desc">Luxury with all amenities</div>
                                 </label>
@@ -196,22 +227,85 @@
 
                             <!-- Credit Card Form -->
                             <div id="cardForm" class="credit-card-form">
-                                <label for="cardNumber" class="form-label">Card Number</label>
-                                <input type="text" id="cardNumber" name="cardNumber" class="form-input"
-                                    placeholder="4321 4321 4321 4321" maxlength="19">
+                                <!-- Cardholder Name -->
+                                <div class="form-group">
+                                    <label for="cardName" class="form-label">Cardholder Name</label>
+                                    <input type="text" id="cardName" name="cardName" class="form-input"
+                                        placeholder="Name as it appears on card">
+                                </div>
+
+                                <!-- Billing Address -->
+                                <div class="form-group">
+                                    <label for="billingAddress" class="form-label">Billing Address</label>
+                                    <input type="text" id="billingAddress" name="billingAddress" class="form-input"
+                                        placeholder="Street address">
+                                </div>
+
+                                <div class="card-row">
+                                    <div class="form-group">
+                                        <label for="billingCity" class="form-label">City</label>
+                                        <input type="text" id="billingCity" name="billingCity" class="form-input"
+                                            placeholder="City">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billingZip" class="form-label">ZIP Code</label>
+                                        <input type="text" id="billingZip" name="billingZip" class="form-input"
+                                            placeholder="ZIP">
+                                    </div>
+                                </div>
+
+                                <!-- Card Number -->
+                                <div class="form-group">
+                                    <label for="cardNumber" class="form-label">Card Number</label>
+                                    <div class="card-input-wrapper">
+                                        <input type="text" id="cardNumber" name="cardNumber" class="form-input"
+                                            placeholder="0000 0000 0000 0000" maxlength="19">
+                                        <i class="bi bi-credit-card card-icon"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Expiry & CVV -->
+                                <div class="card-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate" class="form-label">Expiry Date</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" class="form-input"
+                                            placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <div class="cvv-wrapper">
+                                            <input type="password" id="cvv" name="cvv" class="form-input"
+                                                placeholder="123" maxlength="3">
+                                            <i class="bi bi-question-circle cvv-help" title="3-digit code on back of card"></i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- PayPal Form -->
                             <div id="paypalForm" class="hidden">
-                                <button type="button" class="paypal-btn">
-                                    <i class="bi bi-paypal"></i> Pay with PayPal
-                                </button>
+                                <div class="paypal-info">
+                                    <i class="bi bi-paypal paypal-logo"></i>
+                                    <p>You will be redirected to PayPal to complete your payment securely.</p>
+                                    <a href="https://www.paypal.com" target="_blank" class="paypal-btn">
+                                        <i class="bi bi-paypal"></i> Continue to PayPal
+                                    </a>
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- Terms Checkbox -->
+                        <div class="terms-group">
+                            <input type="checkbox" id="terms" name="terms" class="checkbox-input" required>
+                            <label for="terms" class="checkbox-label">
+                                I agree to the <a href="#" class="terms-link">Terms & Conditions</a> and 
+                                <a href="#" class="terms-link">Cancellation Policy</a>
+                            </label>
                         </div>
 
                         <!-- Submit Button -->
                         <button type="submit" class="submit-btn">
-                            <i class="bi bi-check-circle"></i> Submit Booking
+                            <i class="bi bi-check-circle"></i> Confirm Booking
                         </button>
 
                     </form>
@@ -240,6 +334,10 @@
                                 <span class="summary-value" id="summaryNights">0</span>
                             </div>
                             <div class="summary-item">
+                                <span class="summary-label">Guests</span>
+                                <span class="summary-value" id="summaryGuests">2 Adults, 0 Children</span>
+                            </div>
+                            <div class="summary-item">
                                 <span class="summary-label">Room Type</span>
                                 <span class="summary-value" id="summaryRoom">-</span>
                             </div>
@@ -248,6 +346,10 @@
                                 <span class="summary-value" id="summaryRate">$0</span>
                             </div>
                             <div class="summary-item">
+                                <span class="summary-label">Taxes & Fees (12%)</span>
+                                <span class="summary-value" id="summaryTax">$0</span>
+                            </div>
+                            <div class="summary-item total-row">
                                 <span class="summary-label">Total Amount</span>
                                 <span class="summary-value" id="summaryTotal">$0</span>
                             </div>
@@ -342,6 +444,51 @@
                 </div>
 
             </footer>
+        </div>
+    </div>
+
+
+    <!-- ==================== SUCCESS MODAL ==================== -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="success-icon">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h3 class="modal-title mb-3">Booking Confirmed!</h3>
+                    <p class="modal-message mb-4">
+                        Thank you for choosing Aurelia Luxury Hotel. A confirmation email has been sent to your inbox.
+                    </p>
+                    <div class="booking-details mb-4" id="modalBookingDetails">
+                        <!-- Dynamic content -->
+                    </div>
+                    <button type="button" class="btn btn-primary modal-btn" data-bs-dismiss="modal">
+                        <i class="bi bi-house"></i> Return to Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==================== ERROR MODAL ==================== -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content error-modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="error-icon">
+                        <i class="bi bi-exclamation-circle-fill"></i>
+                    </div>
+                    <h3 class="modal-title mb-3">Oops!</h3>
+                    <p class="modal-message mb-4" id="errorMessage">
+                        Please fill in all required fields.
+                    </p>
+                    <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-left"></i> Go Back
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
