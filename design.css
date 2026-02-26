@@ -678,7 +678,8 @@ body {
             }
         }
 
-/* HERO */
+
+/* HERO/Reservations */
 .reservation-hero {
     background: linear-gradient(to right, rgba(1,18,39,0.63), rgba(0,35,77,0)),
                 url('../images/reservationhero.jpg');
