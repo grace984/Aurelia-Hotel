@@ -3,147 +3,356 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Reservations | Aurelia Luxury Hotel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | Aurelia Luxury Hotel</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Main Design -->
+    <!-- Main Design CSS -->
     <link rel="stylesheet" href="../design.css">
 
-    <!-- Reservation CSS -->
+    <!-- Reservations Page CSS -->
     <link rel="stylesheet" href="reservations.css">
+<base target="_blank">
 </head>
 
 <body>
-
-    <!-- NAVBAR -->
+    <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid d-flex align-items-center">
-            <!-- your navbar code stays the same -->
+
+            <!-- Left Navigation (Desktop) -->
+            <ul class="navbar-nav nav-left d-none d-lg-flex flex-row align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="home.html">
+                        <i class="bi bi-house-fill"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="services.html">
+                        <i class="bi bi-people-fill"></i> Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="rooms.html">
+                        <i class="bi bi-door-open-fill"></i> Rooms
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2 active" href="reservations.html">
+                        <i class="bi bi-clock-fill"></i> Reservations
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Logo -->
+            <a class="navbar-brand flex-shrink-0 mx-3" href="home.html">
+                <img src="../images/logo.png" alt="Luxury Hotel Logo" width="70" height="auto">
+            </a>
+
+            <!-- Right Navigation (Desktop) -->
+            <ul class="navbar-nav nav-right d-none d-lg-flex flex-row align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="aboutus.html">
+                        <i class="bi bi-globe-central-south-asia"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="contactus.html">
+                        <i class="bi bi-envelope-fill"></i> Contact Us
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Mobile Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Aurelia Hotel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="reservations.html">Reservations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </nav>
 
 
-    <!-- HERO SECTION -->
-    <section class="reservation-hero">
-        <div class="container">
-            <h2 class="display-4 text-white fw-semibold">Reservations</h2>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="container py-4 hero-content">
+            <div class="col-12 col-md-8 col-xl-6">
+                <h2 class="display-4 text-start text-white fw-semibold mb-3 hero-title">Reservations</h2>
+            </div>
         </div>
     </section>
 
 
-    <!-- RESERVATION FORM -->
-    <main class="form-container">
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="form-section">
         <div class="container">
-            <div class="form-card">
+            <div class="form-layout">
 
-                <div class="form-title-badge">
-                    <h2>Book Your Stay</h2>
+                <!-- ========== Reservation Form ========== -->
+                <div class="form-card">
+                    <div class="form-header">
+                        <div class="form-title-badge">
+                            <h2>Book Your Stay</h2>
+                        </div>
+                    </div>
+
+                    <form id="bookingForm">
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" class="form-input"
+                                placeholder="Enter your full name" required>
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="Enter your email address" required>
+                        </div>
+
+                        <!-- Check-In / Check-Out Dates -->
+                        <div class="form-group">
+                            <div class="date-grid">
+                                <div>
+                                    <label for="checkIn" class="form-label">Check-In</label>
+                                    <input type="date" id="checkIn" name="checkIn" class="form-input" required>
+                                    <small class="error-message" id="checkInError"></small>
+                                </div>
+                                <div>
+                                    <label for="checkOut" class="form-label">Check-Out</label>
+                                    <input type="date" id="checkOut" name="checkOut" class="form-input" required>
+                                    <small class="error-message" id="checkOutError"></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Room Type Selection -->
+                        <div class="form-group">
+                            <label class="form-label">Room Type</label>
+                            <div class="room-options">
+
+                                <label class="room-option" data-room="standard">
+                                    <input type="radio" name="roomType" value="standard" data-price="120" required>
+                                    <div class="room-type-name">Standard Room</div>
+                                    <div class="room-type-price">$120/night</div>
+                                    <div class="room-type-desc">Cozy room with city view</div>
+                                </label>
+
+                                <label class="room-option" data-room="deluxe">
+                                    <input type="radio" name="roomType" value="deluxe" data-price="220">
+                                    <div class="room-type-name">Deluxe Suite</div>
+                                    <div class="room-type-price">$220/night</div>
+                                    <div class="room-type-desc">Spacious with ocean view</div>
+                                </label>
+
+                                <label class="room-option" data-room="presidential">
+                                    <input type="radio" name="roomType" value="presidential" data-price="450">
+                                    <div class="room-type-name">Presidential</div>
+                                    <div class="room-type-price">$450/night</div>
+                                    <div class="room-type-desc">Luxury with all amenities</div>
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <!-- Payment Method Section -->
+                        <div class="payment-section">
+                            <h3 class="payment-title">Select Payment Method</h3>
+
+                            <label class="payment-method active" id="cardMethod">
+                                <input type="radio" name="paymentMethod" value="card" checked>
+                                <span><i class="bi bi-credit-card"></i> Credit / Debit Card</span>
+                            </label>
+
+                            <label class="payment-method" id="paypalMethod">
+                                <input type="radio" name="paymentMethod" value="paypal">
+                                <span><i class="bi bi-paypal"></i> PayPal</span>
+                            </label>
+
+                            <!-- Credit Card Form -->
+                            <div id="cardForm" class="credit-card-form">
+                                <label for="cardNumber" class="form-label">Card Number</label>
+                                <input type="text" id="cardNumber" name="cardNumber" class="form-input"
+                                    placeholder="4321 4321 4321 4321" maxlength="19">
+                            </div>
+
+                            <!-- PayPal Form -->
+                            <div id="paypalForm" class="hidden">
+                                <button type="button" class="paypal-btn">
+                                    <i class="bi bi-paypal"></i> Pay with PayPal
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">
+                            <i class="bi bi-check-circle"></i> Submit Booking
+                        </button>
+
+                    </form>
                 </div>
 
-                <form id="bookingForm">
 
-                    <!-- Full Name -->
-                    <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-input" required>
-                    </div>
+                <!-- ========== Info Section (Sidebar) ========== -->
+                <div class="info-section">
 
-                    <!-- Email -->
-                    <div class="form-group">
-                        <label class="form-label">Email Address</label>
-                        <input type="email" class="form-input" required>
-                    </div>
-
-                    <!-- Dates -->
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label>Check-In</label>
-                            <input type="date" id="checkIn" class="form-input" required>
-                            <small class="error-message"></small>
+                    <!-- Booking Summary Card -->
+                    <div class="summary-card">
+                        <div class="summary-header">
+                            <h3><i class="bi bi-receipt"></i> Booking Summary</h3>
                         </div>
-
-                        <div class="form-group">
-                            <label>Check-Out</label>
-                            <input type="date" id="checkOut" class="form-input" required>
-                            <small class="error-message"></small>
-                        </div>
-                    </div>
-
-                    <!-- Room Type -->
-                    <div class="form-group">
-                        <label class="form-label">Room Type</label>
-                        <div class="room-options">
-
-                            <label class="room-option">
-                                <input type="radio" name="roomType" value="standard" required>
-                                <div class="room-type-name">Standard Room</div>
-                                <div class="room-type-price">$120/night</div>
-                                <div class="room-type-desc">Cozy room with city view</div>
-                            </label>
-
-                            <label class="room-option">
-                                <input type="radio" name="roomType" value="deluxe">
-                                <div class="room-type-name">Deluxe Suite</div>
-                                <div class="room-type-price">$220/night</div>
-                                <div class="room-type-desc">Spacious with ocean view</div>
-                            </label>
-
-                            <label class="room-option">
-                                <input type="radio" name="roomType" value="presidential">
-                                <div class="room-type-name">Presidential</div>
-                                <div class="room-type-price">$450/night</div>
-                                <div class="room-type-desc">Luxury with all amenities</div>
-                            </label>
-
+                        <div class="summary-body">
+                            <div class="summary-item">
+                                <span class="summary-label">Check-In Date</span>
+                                <span class="summary-value" id="summaryCheckIn">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Check-Out Date</span>
+                                <span class="summary-value" id="summaryCheckOut">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Nights</span>
+                                <span class="summary-value" id="summaryNights">0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Room Type</span>
+                                <span class="summary-value" id="summaryRoom">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Rate per Night</span>
+                                <span class="summary-value" id="summaryRate">$0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Total Amount</span>
+                                <span class="summary-value" id="summaryTotal">$0</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Payment -->
-                    <div class="payment-section">
-
-                        <h3 class="payment-title">Select Payment Method</h3>
-
-                        <label class="payment-method active">
-                            <input type="radio" name="paymentMethod" value="card" checked>
-                            <span>Credit / Debit Card</span>
-                        </label>
-
-                        <label class="payment-method">
-                            <input type="radio" name="paymentMethod" value="paypal">
-                            <span>PayPal</span>
-                        </label>
-
-                        <div id="cardForm" class="credit-card-form">
-                            <input type="text" id="cardNumber" class="form-input" placeholder="4321 4321 4321 4321">
-                        </div>
-
-                        <div id="paypalForm" class="hidden">
-                            <button type="button" class="paypal-btn">Pay with PayPal</button>
-                        </div>
-
+                    <!-- Reservation Policy Card -->
+                    <div class="policy-card">
+                        <h3><i class="bi bi-info-circle"></i> Reservation Policy</h3>
+                        <ul class="policy-list">
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Free cancellation up to 24 hours before check-in</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Check-in time starts at 3:00 PM</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Check-out time is 12:00 PM</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Valid ID required at check-in</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <button type="submit" class="submit-btn">Submit Booking</button>
+                    <!-- Quick Action Card -->
+                    <div class="quick-action-card">
+                        <h3><i class="bi bi-question-circle"></i> Need Help?</h3>
+                        <p>Our reservation team is available 24/7 to assist you with your booking.</p>
+                        <a href="contactus.html" class="contact-btn">
+                            <i class="bi bi-headset"></i> Contact Support
+                        </a>
+                    </div>
 
-                </form>
+                </div>
+
             </div>
         </div>
     </main>
 
 
-    <!-- FOOTER -->
-    <footer class="footer-section">
-        <!-- keep your footer here -->
-    </footer>
+    <!-- ==================== FOOTER ==================== -->
+    <div class="container-fluid border-top footer-section">
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-3">
 
+                <!-- Logo & Description -->
+                <div class="col">
+                    <a href="home.html" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <img src="../images/logo.png" alt="Aurelia Logo" width="110" height="auto">
+                    </a>
+                    <p class="text-muted">
+                        Indulge in refined comfort, timeless style,
+                        and exceptional service.
+                        Your unforgettable luxury escape begins here.
+                    </p>
+                </div>
+
+                <div class="col"></div>
+
+                <!-- FAQ & Policies -->
+                <div class="col">
+                    <h5>FAQ & Policies</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ Accordion</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Policy Tables</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Gallery -->
+                <div class="col">
+                    <h5>Gallery</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">Satisfied Customers</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted">History</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Page Developer -->
+                <div class="col">
+                    <h5>Page Developer</h5>
+                    <p class="text-muted">Marcus Tenoria</p>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+
+    <!-- ==================== SCRIPTS ==================== -->
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
-    <!-- Reservation JS -->
+    <!-- Reservations Page JS -->
     <script src="reservations.js"></script>
 
 </body>
