@@ -385,6 +385,7 @@ body {
   padding: 14px 16px;
   border: 1px solid #ddd;
   text-align: left;
+  font-size: 14px;
 }
 
 .custom-policy-table thead th {
@@ -395,6 +396,7 @@ body {
 
 .custom-policy-table tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
+  font-size: 14px;
 }
 
 /* Makes long text wrap nicely */
