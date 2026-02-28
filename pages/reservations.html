@@ -19,7 +19,6 @@
     <!-- Reservations Page CSS -->
     <link rel="stylesheet" href="reservations.css">
 
-    <base target="_blank">
 </head>
 
 <body>
@@ -291,10 +290,11 @@
                             <div id="paypalForm" class="hidden">
                                 <div class="paypal-info">
                                     <i class="bi bi-paypal paypal-logo"></i>
-                                    <p>You will be redirected to PayPal to complete your payment securely.</p>
-                                    <a href="https://www.paypal.com" target="_blank" class="paypal-btn">
-                                        <i class="bi bi-paypal"></i> Continue to PayPal
-                                    </a>
+                                    <p>Click the button below after you finish your PayPal payment.</p>
+                                    <button type="button" class="paypal-btn" id="completePaypalBtn">
+                                        <i class="bi bi-paypal"></i> I Already Paid via PayPal
+                                    </button>
+                                    <small id="paypalStatus" class="error-message"></small>
                                 </div>
                             </div>
                         </div>
@@ -461,7 +461,7 @@
                     </div>
                     <h3 class="modal-title mb-3">Booking Confirmed!</h3>
                     <p class="modal-message mb-4">
-                        Thank you for choosing Aurelia Luxury Hotel. A confirmation email has been sent to your inbox.
+                        Payment is successful. Thank you for choosing Aurelia Luxury Hotel. A confirmation email will be sent to your inbox.
                     </p>
                     <div class="booking-details mb-4" id="modalBookingDetails">
                         <!-- Dynamic content -->
