@@ -10,11 +10,11 @@
 
 .navbar {
     background: linear-gradient(to right, #f1d38b 0%, #F2ECE0 30%, #F2ECE0 75%, #f1d38b 100%);
-    min-height: 86px;
+    min-height: 56px;
 }
 
 .navbar .container-fluid {
-    min-height: 86px;
+    min-height:56px;
 }
 
 .navbar-brand img {
@@ -43,7 +43,7 @@
 }
 
 .bsb-hero-6 {
-    margin-top: 86px;
+    margin-top: 56px;
     min-height: 500px !important;
     background-size: cover !important;
     background-position: center !important;
