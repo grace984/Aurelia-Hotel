@@ -10,6 +10,23 @@
 
 .navbar {
     background: linear-gradient(to right, #f1d38b 0%, #F2ECE0 30%, #F2ECE0 75%, #f1d38b 100%);
+    min-height: 86px;
+}
+
+.navbar .container-fluid {
+    min-height: 86px;
+}
+
+.navbar-brand img {
+    height: 54px;
+    width: auto;
+}
+
+/* Keep navbar text size stable across active/inactive pages */
+.navbar .nav-link,
+.navbar .nav-link.active {
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 /* ==================== FOOTER ==================== */
@@ -17,6 +34,21 @@
     background: linear-gradient(to right, #f3d37b 38%, #e4bd64 88%);
     margin-bottom: 0 !important;
     padding-bottom: 0;
+}
+
+.footer-section footer {
+    min-height: 280px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.bsb-hero-6 {
+    margin-top: 86px;
+    min-height: 500px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 /* ==================== GENERAL BODY AND LAYOUT ==================== */
@@ -655,3 +687,1161 @@ main {
 .collapsible[open] p {
     color: #000000; /* black when open */
 }
+
+/* ==================== RESERVATIONS PAGE ==================== */
+
+body {
+    background-color: #f3f3f5;
+}
+
+.hero-section {
+    margin-top: 86px;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.reservations-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('../images/reservationhero.jpg') center/cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 0;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.form-section {
+    padding: 32px 0 38px;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.form-card,
+.summary-card,
+.policy-card,
+.quick-action-card {
+    background-color: #fff;
+    border: 1px solid #ddd8cc;
+    border-radius: 8px;
+}
+
+.form-card {
+    padding: 22px;
+}
+
+.form-title-badge {
+    display: inline-block;
+    background-color: #e8d196;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+}
+
+.form-title-badge h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: #1f2530;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-label {
+    margin-bottom: 6px;
+    color: #2e3542;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid #cdbf99;
+    border-radius: 4px;
+    padding: 9px 10px;
+    font-size: 0.95rem;
+    color: #1f2530;
+    background-color: #fff;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #b7933f;
+    box-shadow: 0 0 0 2px rgba(183, 147, 63, 0.2);
+}
+
+.error-message {
+    display: block;
+    color: #b14545;
+    min-height: 16px;
+    font-size: 0.8rem;
+}
+
+.date-grid,
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.room-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.room-option {
+    border: 1px solid #d8cfb7;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.room-option:hover {
+    border-color: #b7933f;
+}
+
+.room-option input {
+    margin-right: 6px;
+}
+
+.room-option.active {
+    border-color: #b7933f;
+    background-color: #faf6eb;
+}
+
+.room-type-name {
+    font-weight: 700;
+    color: #242b37;
+}
+
+.room-type-price {
+    color: #8b6f2a;
+    font-weight: 600;
+}
+
+.room-type-desc {
+    color: #586073;
+    font-size: 0.88rem;
+}
+
+.payment-section {
+    border-top: 1px solid #e3ddcf;
+    padding-top: 14px;
+    margin-top: 8px;
+}
+
+.payment-title {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.payment-method {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid #d8cfb7;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+.payment-method.active {
+    border-color: #b7933f;
+    background-color: #faf6eb;
+}
+
+.card-input-wrapper,
+.cvv-wrapper {
+    position: relative;
+}
+
+.card-icon,
+.cvv-help {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #596275;
+}
+
+.hidden {
+    display: none;
+}
+
+.paypal-info {
+    border: 1px dashed #cfbf98;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: #fcf8ee;
+}
+
+.paypal-logo {
+    font-size: 1.8rem;
+    color: #0070ba;
+}
+
+.paypal-btn,
+.contact-btn,
+.submit-btn,
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    border: none;
+}
+
+.paypal-btn,
+.contact-btn {
+    background-color: #e8d196;
+    color: #2f260f;
+    padding: 8px 12px;
+}
+
+.paypal-btn:hover,
+.contact-btn:hover {
+    background-color: #dcbf72;
+    color: #2f260f;
+}
+
+.terms-group {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0 16px;
+}
+
+.checkbox-input {
+    margin-top: 4px;
+}
+
+.checkbox-label {
+    color: #485062;
+    margin-bottom: 0;
+}
+
+.terms-link {
+    color: #7c6328;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #b7933f;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.submit-btn:hover {
+    background-color: #9e7e35;
+}
+
+.info-section {
+    display: grid;
+    gap: 14px;
+}
+
+.summary-header {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2dbc9;
+}
+
+.summary-header h3 {
+    margin: 0;
+    font-size: 1.28rem;
+}
+
+.summary-body {
+    padding: 10px 14px 14px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid #eee7d8;
+    padding: 8px 0;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    color: #4f5665;
+}
+
+.summary-value {
+    color: #1d2430;
+    font-weight: 600;
+    text-align: right;
+}
+
+.total-row {
+    margin-top: 4px;
+}
+
+.total-row .summary-label,
+.total-row .summary-value {
+    font-size: 1.06rem;
+    font-weight: 700;
+}
+
+.policy-card,
+.quick-action-card {
+    padding: 14px;
+}
+
+.policy-card h3,
+.quick-action-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-list li {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #495061;
+}
+
+.policy-list i {
+    color: #2f8e3d;
+}
+
+.quick-action-card p {
+    color: #495061;
+}
+
+.success-modal-content,
+.error-modal-content {
+    border-radius: 8px;
+}
+
+.success-icon i {
+    font-size: 2.8rem;
+    color: #2f8e3d;
+}
+
+.error-icon i {
+    font-size: 2.8rem;
+    color: #b14545;
+}
+
+.booking-details {
+    background-color: #f7f3e8;
+    border: 1px solid #e4dcc8;
+    padding: 10px;
+    text-align: left;
+}
+
+.modal-btn.btn-primary {
+    background-color: #b7933f;
+    border-color: #b7933f;
+}
+
+.modal-btn.btn-primary:hover {
+    background-color: #9e7e35;
+    border-color: #9e7e35;
+}
+
+@media (max-width: 1100px) {
+    .form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+    }
+}
+
+@media (max-width: 850px) {
+    .room-options {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    .date-grid,
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .form-card {
+        padding: 14px;
+    }
+
+    .form-title-badge h2 {
+        font-size: 1.5rem;
+    }
+
+    .payment-method {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* ==================== ROOMS PAGE ==================== */
+
+body {
+    background-color: #f3f3f5;
+}
+
+.hero-section {
+    margin-top: 86px;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rooms-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
+        url('../images/roomshero.jpg') center/cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 0;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 520px;
+}
+
+.rooms-intro-section {
+    padding: 42px 0 24px;
+}
+
+.section-badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    background-color: #e8d196;
+    color: #3d2f0a;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    color: #1f2530;
+}
+
+.section-description {
+    color: #50545f;
+    line-height: 1.6;
+}
+
+.rooms-showcase-section {
+    padding: 20px 0 25px;
+}
+
+.room-card {
+    background-color: #fff;
+    border: 1px solid #ddd7ca;
+    margin-bottom: 24px;
+}
+
+.room-image-wrapper {
+    position: relative;
+    height: 100%;
+    min-height: 320px;
+}
+
+.room-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-price-badge {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    background-color: rgba(0, 0, 0, 0.72);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.room-price-badge .price {
+    font-weight: 700;
+}
+
+.room-price-badge .per-night {
+    font-size: 0.9rem;
+}
+
+.room-price-badge.featured {
+    background-color: rgba(70, 50, 10, 0.84);
+}
+
+.room-content-col {
+    padding: 22px;
+}
+
+.room-category {
+    display: inline-block;
+    font-size: 0.8rem;
+    background-color: #f0e8d1;
+    color: #5f4a17;
+    padding: 3px 9px;
+    margin-bottom: 8px;
+}
+
+.room-category.luxury {
+    background-color: #e0c98f;
+}
+
+.room-name {
+    margin-bottom: 8px;
+    color: #1d222d;
+}
+
+.room-description {
+    color: #4f5665;
+    margin-bottom: 14px;
+}
+
+.room-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #414959;
+    font-size: 0.95rem;
+}
+
+.feature-item i {
+    color: #af8f48;
+}
+
+.room-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.amenity-tag {
+    background-color: #f4f1e8;
+    color: #3f4654;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border: 1px solid #ddd6c7;
+}
+
+.room-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-book-now,
+.btn-view-details,
+.btn-table-book,
+.btn-cta,
+.btn-book-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 8px 14px;
+}
+
+.btn-book-now,
+.btn-table-book,
+.btn-cta,
+.btn-book-modal {
+    background-color: #b7933f;
+    color: #fff;
+}
+
+.btn-book-now:hover,
+.btn-table-book:hover,
+.btn-cta:hover,
+.btn-book-modal:hover {
+    background-color: #9e7e35;
+    color: #fff;
+}
+
+.luxury-btn {
+    background-color: #8b6c24;
+}
+
+.btn-view-details {
+    border: 1px solid #b7933f;
+    color: #735b24;
+    background-color: #fff;
+}
+
+.btn-view-details:hover {
+    background-color: #f4efdf;
+    color: #735b24;
+}
+
+.comparison-section {
+    padding: 24px 0 25px;
+}
+
+.comparison-table-wrapper {
+    background-color: #fff;
+    border: 1px solid #ddd8cc;
+}
+
+.comparison-table {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    vertical-align: middle;
+    border-color: #ddd8cc;
+}
+
+.comparison-table th {
+    background-color: #f7f3e7;
+}
+
+.comparison-table .room-header {
+    text-align: center;
+}
+
+.room-type,
+.room-rate {
+    display: block;
+}
+
+.room-rate {
+    font-size: 0.85rem;
+    color: #5c6170;
+}
+
+.comparison-table .featured {
+    background-color: #faf7ef;
+}
+
+.check-icon {
+    color: #2f8e3d;
+}
+
+.x-icon {
+    color: #b14545;
+}
+
+.cta-section {
+    padding: 10px 0 34px;
+}
+
+.cta-card {
+    background-color: #fff;
+    border: 1px solid #ddd8cc;
+    padding: 20px;
+}
+
+.cta-card h3 {
+    margin-bottom: 8px;
+}
+
+.cta-card p {
+    margin-bottom: 0;
+    color: #4f5665;
+}
+
+.room-modal-content {
+    border-radius: 8px;
+}
+
+.modal-room-image {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.amenity-item {
+    background-color: #f4f1e8;
+    padding: 8px;
+    border: 1px solid #e2dac8;
+    font-size: 0.9rem;
+}
+
+.room-policy ul {
+    margin-bottom: 0;
+}
+
+.modal-price {
+    font-weight: 700;
+    color: #252b38;
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: 380px;
+    }
+
+    .room-image-wrapper {
+        min-height: 260px;
+    }
+
+    .room-features {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bsb-hero-6,
+    .hero-section {
+        min-height: 350px !important;
+    }
+
+    .footer-section footer {
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-content {
+        padding-bottom: 18px;
+    }
+
+    .rooms-intro-section {
+        padding-top: 28px;
+    }
+
+    .room-content-col {
+        padding: 16px;
+    }
+
+    .cta-card {
+        padding: 14px;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== CONTACT PAGE ==================== */
+/* Scoped under .contact-section to avoid overriding other pages */
+
+.contact-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-section .contact-form-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+}
+
+.contact-section .form-header {
+    margin-bottom: 30px;
+}
+
+.contact-section .form-title-badge {
+    display: inline-block;
+    background: #d4a574;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 6px;
+}
+
+.contact-section .form-title-badge h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-section .form-label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.contact-section .form-input,
+.contact-section .form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0d5c7;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: #faf8f5;
+}
+
+.contact-section .form-input:focus,
+.contact-section .form-textarea:focus {
+    outline: none;
+    border-color: #d4a574;
+    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+}
+
+.contact-section .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-section .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-section .checkbox-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #d4a574;
+    cursor: pointer;
+}
+
+.contact-section .checkbox-label {
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.contact-section .submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: #c9a86c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-section .submit-btn:hover {
+    background: #b8975a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201, 168, 108, 0.4);
+}
+
+.contact-section .form-subtitle {
+    margin-top: 12px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.contact-section .privacy-link {
+    color: #8b6914;
+    text-decoration: none;
+}
+
+.contact-section .privacy-link:hover {
+    text-decoration: underline;
+}
+
+/* Right-side contact cards */
+.contact-section .contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-section .map-container,
+.contact-section .contact-details-card,
+.contact-section .social-media-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-section .map-container,
+.contact-section .contact-details-card {
+    overflow: hidden;
+}
+
+.contact-section .map-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .map-header,
+.contact-section .contact-details-header {
+    background: #d4a574;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.contact-section .map-header h3,
+.contact-section .contact-details-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contact-section .map-wrapper {
+    position: relative;
+}
+
+.contact-section .map-overlay {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    pointer-events: none;
+}
+
+.contact-section .location-pin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.contact-section .map-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    background: #fff;
+}
+
+.contact-section .directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-section .contact-details-body {
+    padding: 20px;
+}
+
+.contact-section .contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.contact-section .contact-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-section .detail-icon-wrapper {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f6ede2;
+    color: #c9a86c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-section .detail-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .detail-label {
+    font-size: 0.85rem;
+    color: #777;
+    font-weight: 600;
+}
+
+.contact-section .detail-value {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-section .social-media-card {
+    padding: 20px;
+}
+
+.contact-section .social-media-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.contact-section .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-section .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6ede2;
+    color: #8b6914;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-section .social-icon:hover {
+    background: #d4a574;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.contact-section .quick-action-card {
+    background: linear-gradient(135deg, #f5e6d3 0%, #fdf6ed 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    border: 1px solid #e8d5c0;
+}
+
+.contact-section .quick-action-card h3 {
+    color: #8b6914;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contact-section .quick-action-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.contact-section .book-now-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-section .book-now-btn:hover {
+    background: #1a252f;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+}
+
+/* Contact hero image only (height is controlled by shared .hero-section rules) */
+.contactus-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, rgba(1, 18, 39, 0.7), rgba(0, 35, 77, 0.3)), url('../images/contactushero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section .contact-form-card,
+    .contact-section .quick-action-card {
+        padding: 25px;
+    }
+}
+
