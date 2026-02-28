@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurelia Luxury Hotel</title>
+    <title>About Us | Aurelia Luxury Hotel</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../design.css">
-    <!-- Bootstrap CSS  -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Design CSS -->
+    <link rel="stylesheet" href="../design.css">
+
+    <base target="_blank">
 </head>
 
 <body>
@@ -21,33 +27,43 @@
 
             <ul class="navbar-nav nav-left d-none d-lg-flex flex-row align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="home.html"><i class="bi bi-house-fill"></i> Home</a>
+                    <a class="nav-link mx-lg-2" href="home.html" target="_self">
+                        <i class="bi bi-house-fill"></i> Home
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="services.html"><i class="bi bi-people-fill"></i> Services</a>
+                    <a class="nav-link mx-lg-2" href="services.html" target="_self">
+                        <i class="bi bi-people-fill"></i> Services
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="rooms.html"><i class="bi bi-door-open-fill"></i> Rooms</a>
+                    <a class="nav-link mx-lg-2" href="rooms.html" target="_self">
+                        <i class="bi bi-door-open-fill"></i> Rooms
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="reservations.html"><i class="bi bi-clock-fill"></i>
-                        Reservations</a>
+                    <a class="nav-link mx-lg-2" href="reservations.html" target="_self">
+                        <i class="bi bi-clock-fill"></i> Reservations
+                    </a>
                 </li>
             </ul>
 
 
-            <a class="navbar-brand flex-shrink-0 mx-3" href="home.html">
+            <a class="navbar-brand flex-shrink-0 mx-3" href="home.html" target="_self">
                 <img src="../images/logo.png" alt="Luxury Hotel Logo" width="70" height="auto">
             </a>
 
 
             <ul class="navbar-nav nav-right d-none d-lg-flex flex-row align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="aboutus.html"><i class="bi bi-globe-central-south-asia"></i> About
-                        Us</a>
+                    <a class="nav-link mx-lg-2 active" href="aboutus.html" target="_self">
+                        <i class="bi bi-globe-central-south-asia"></i> About Us
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="contactus.html"><i class="bi bi-envelope-fill"></i> Contact Us</a>
+                    <a class="nav-link mx-lg-2" href="contactus.html" target="_self">
+                        <i class="bi bi-envelope-fill"></i> Contact Us
+                    </a>
                 </li>
             </ul>
 
@@ -66,12 +82,12 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.html" target="_self">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html" target="_self">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html" target="_self">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservations.html" target="_self">Reservations</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="aboutus.html" target="_self">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html" target="_self">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -79,152 +95,112 @@
         </div>
     </nav>
 
-    <!-- hero -->
-    <section>
-        <div class="container-fluid bsb-hero-6" style="background-image: linear-gradient(to right, rgba(1, 18, 39, 0.63), rgba(0,35,77,0)), url('../images/abouthero.jpg');
-            background-size: cover;
-            background-position: center;
-            min-height: 500px;
-            display: flex;
-            align-items: center;">
-            <div class="container py-4">
-                <div class="col-12 col-md-8 col-xl-6">
-                    <h2 class="display-4 text-start text-white fw-semibold mb-3">About Aurelia Grand Hotel</h2>
-                </div>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+        <div class="aboutus-hero-bg"></div>
+        <div class="container py-4 hero-content">
+            <div class="col-12 col-md-8 col-xl-6">
+                <h2 class="display-4 text-start text-white fw-semibold mb-3 hero-title">About Aurelia Grand Hotel</h2>
+                <p class="lead text-start text-white fw-normal mb-0 hero-subtitle">Discover our story and legacy.</p>
             </div>
         </div>
     </section>
 
 
-    <!-- MAIN CONTENT (placeholder) -->
-    <!-- MAIN CONTENT -->
-    <main>
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="about-main">
 
-        <!-- Our Story -->
-        <div class="container mt-4 mb-5">
-            <div class="story-wrapper">
-                <div class="story-title">Our Story</div>
-                <div class="story-card">
-                   <p class="mb-0 text-muted" style="text-align: justify; text-indent: 40px;">
-                        Our hotel has long been a place where luxury and meaningful
-                        experiences would meet in perfect harmony. We were established
-                        with the idea of providing more than a bed to sleep in, and we
-                        have strived to provide exquisite comfort, customized service,
-                        and memorable experiences to every customer who enters our doors.
-                        Our history of excellence dates back long enough and is evident in
-                        each of our details that include our beautiful spacing and the
-                        warm hospitality that made us who we are. Over the years,
-                        we have been able to stick to the principles of giving timeless
-                        sophistication, and we are ever changing to reach the expectations
-                        of the ultimate standards of modern luxuries to make each stay an
-                        unforgettable experience.
-                    </p>
+        <section class="about-story-section py-5">
+            <div class="container">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-8">
+                        <div class="about-panel h-100">
+                            <span class="section-badge">Our Story</span>
+                            <h2 class="about-section-title">A Legacy of Refined Hospitality</h2>
+                            <p>
+                                Our hotel has long been a place where luxury and meaningful experiences meet in perfect harmony.
+                                We were established with the idea of providing more than a bed to sleep in, and we continue to
+                                deliver exquisite comfort, personalized service, and memorable moments to every guest.
+                            </p>
+                            <p class="mb-0">
+                                Our history of excellence is reflected in every detail—from elegant spaces to warm hospitality.
+                                Over the years, we have remained committed to timeless sophistication while continuously evolving
+                                to meet modern standards of luxury and create unforgettable stays.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-panel h-100">
+                            <span class="section-badge">Achievements</span>
+                            <h3 class="about-subtitle">Recognition & Awards</h3>
+                            <ul class="about-awards mb-0">
+                                <li><i class="bi bi-award-fill"></i> Best Luxury Hotel 2023 - Travel Awards</li>
+                                <li><i class="bi bi-award-fill"></i> Certificate of Excellence 2022 - TripAdvisor</li>
+                                <li><i class="bi bi-award-fill"></i> Green Hotel Award 2021 - Eco Tourism Association</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Achievements -->
-        <div class="container mt-4 mb-5">
-            <div class="story-wrapper">
-                <div class="story-title">Achievements</div>
-                <div class="story-card">
-                    <ul class="mb-0 text-muted">
-                        <li>Best Luxury Hotel 2023 - Travel Awards</li>
-                        <li>Certificate of Excellence 2022 - TripAdvisor</li>
-                        <li>Green Hotel Award 2021 - Eco Tourism Association</li>
-                    </ul>
+        <section class="about-experience-section pb-5">
+            <div class="container">
+                <div class="section-header text-center mb-4">
+                    <span class="section-badge">Luxury Experience</span>
+                    <h2 class="section-title">What Defines Aurelia</h2>
+                    <p class="section-description">From wellness to celebrations, every space is designed for comfort, elegance, and lasting memories.</p>
+                </div>
+
+                <div class="about-experience-card mb-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-4">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/038/000/288/small_2x/ai-generated-romantic-candlelight-dinner-for-couple-table-setup-at-night-man-and-woman-hold-glass-of-champagne-concept-for-valentine-s-day-or-date-photo.jpg" alt="Dining" class="img-fluid rounded about-experience-img">
+                        </div>
+                        <div class="col-lg-8">
+                            <h3>Dining</h3>
+                            <p class="mb-0">Our dining experience blends local influences with global cuisine, crafted by highly qualified chefs. Every dish is carefully prepared with premium ingredients and served in an elegant ambiance that transforms meals into memorable moments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-experience-card mb-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-4 order-lg-2">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.mIcgytDRi8HH5W4Lkjqh8AHaFA?w=3000&h=2028&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Spa" class="img-fluid rounded about-experience-img">
+                        </div>
+                        <div class="col-lg-8 order-lg-1">
+                            <h3>Spa</h3>
+                            <p class="mb-0">Our spa is a serene haven designed to restore balance and revive the senses. Through professional care, calming interiors, and personalized wellness programs, guests can enjoy complete tranquility and leave refreshed and rejuvenated.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-experience-card mb-4">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-4">
+                            <img src="https://img.freepik.com/premium-photo/interior-dark-luxury-hotel-room-night_611456-85.jpg?w=740" alt="Rooms" class="img-fluid rounded about-experience-img">
+                        </div>
+                        <div class="col-lg-8">
+                            <h3>Rooms</h3>
+                            <p class="mb-0">Our beautifully furnished rooms combine comfort and sophistication, offering a relaxing retreat after business or leisure. With refined interiors, modern amenities, and thoughtful design, each room provides privacy, comfort, and true luxury.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-experience-card">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-4 order-lg-2">
+                            <img src="https://ivandianaphotography.com/wp-content/uploads/2017/06/The_Grove_Wedding_Las_Vegas_03f.jpg" alt="Events Place" class="img-fluid rounded about-experience-img">
+                        </div>
+                        <div class="col-lg-8 order-lg-1">
+                            <h3>Event's Place</h3>
+                            <p class="mb-0">Our events place features a flexible and elegant venue ideal for celebrations, conferences, and special occasions. With modern facilities and a dedicated team, every event runs smoothly and leaves meaningful memories for hosts and guests.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Luxury Experience -->
-        <div class="container mt-4 mb-5">
-            <div class="story-wrapper">
-                <div class="story-title">Luxury Experience</div>
-                <div class="story-card">
-
-                    <!-- Dining -->
-                    <h2 class="mt-4">Dining</h2>
-                    <div class="row align-items-start g-3">
-                        <div class="col-12 col-md">
-                            <p class="mb-0 text-muted">
-                                A combination of sophisticated cuisines and
-                                sophisticated atmosphere is featured in our
-                                cuisine where we combine local influences with
-                                a global cuisine blended by highly qualified chefs.
-                                Each food is carefully made with high quality
-                                dishes and presented in exquisite environment
-                                which converts the ordinary food into an unforgettable experience.
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-auto">
-                            <img src="https://static.vecteezy.com/system/resources/thumbnails/038/000/288/small_2x/ai-generated-romantic-candlelight-dinner-for-couple-table-setup-at-night-man-and-woman-hold-glass-of-champagne-concept-for-valentine-s-day-or-date-photo.jpg"
-                                alt="Dining" class="img-fluid rounded section-img">
-                        </div>
-                    </div>
-
-                    <!-- Spa -->
-                    <h2 class="mt-5">Spa</h2>
-                    <div class="row align-items-start g-3">
-                        <div class="col-12 col-md">
-                            <p class="mb-0 text-muted">
-                                Our spa is a peaceful haven meant to bring back the
-                                balance and revive the senses. Through professional
-                                care services, serene decor, and customized wellness
-                                programmes, the guests will be able to relax in an
-                                environment of complete tranquility and walk out feeling
-                                refreshed, rejuvenated and rejuvenated. Massages,
-                                energy-renewing treatments, all the details are carefully
-                                selected to enable a complete escape of the life routine.
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-auto">
-                            <img src="https://tse4.mm.bing.net/th/id/OIP.mIcgytDRi8HH5W4Lkjqh8AHaFA?w=3000&h=2028&rs=1&pid=ImgDetMain&o=7&rm=3"
-                                alt="Spa" class="img-fluid rounded section-img">
-                        </div>
-                    </div>
-
-                    <!-- ROOMS -->
-                    <h2 class="mt-5">Rooms</h2>
-                    <div class="row align-items-start g-3">
-                        <div class="col-12 col-md">
-                            <p class="mb-0 text-muted">
-                                We have beautifully furnished rooms incorporating comfort and
-                                sophistication, in order to offer you a relaxing experience
-                                at the end of a day of exploration or business. With comfortable
-                                furniture, contemporary comforts, and sophisticated details,
-                                every room guarantees privacy, comfort, and the extra luxurious
-                                experience.
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-auto">
-                            <img src="https://img.freepik.com/premium-photo/interior-dark-luxury-hotel-room-night_611456-85.jpg?w=740"
-                                alt="Spa" class="img-fluid rounded section-img">
-                        </div>
-                    </div>
-
-                    <!-- EVENT'S PLACE -->
-                    <h2 class="mt-5">Event's Place</h2>
-                    <div class="row align-items-start g-3">
-                        <div class="col-12 col-md">
-                            <p class="mb-0 text-muted">
-                                Our events place presents a flexible and well-decorated
-                                facility that is ideal in the celebration, conferences,
-                                and special events. With state-of-the-art facilities and
-                                a dedicated events team, we manage to make every event
-                                run smoothly bringing memorable experiences to both hosts
-                                and guests.
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-auto">
-                            <img src="https://ivandianaphotography.com/wp-content/uploads/2017/06/The_Grove_Wedding_Las_Vegas_03f.jpg"
-                                alt="Spa" class="img-fluid rounded section-img">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        </section>
 
     </main>
 

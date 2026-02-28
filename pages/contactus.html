@@ -6,55 +6,366 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Aurelia Luxury Hotel</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../design.css">
-    <!-- Bootstrap CSS  -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    
+    <style>
+        /* Contact Page Styles */
+        .contact-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Contact Form Card */
+        .contact-form-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+        
+        .form-header {
+            margin-bottom: 30px;
+        }
+        
+        .form-title-badge {
+            display: inline-block;
+            background: #d4a574;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 6px;
+        }
+        
+        .form-title-badge h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0d5c7;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            background: #faf8f5;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #d4a574;
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Checkboxes */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .checkbox-input {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            accent-color: #d4a574;
+            cursor: pointer;
+        }
+        
+        .checkbox-label {
+            font-size: 0.9rem;
+            color: #555;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #c9a86c;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #b8975a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201, 168, 108, 0.4);
+        }
+        
+        /* Contact Info Section */
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        /* Map Container */
+        .map-container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .map-header {
+            background: #d4a574; 
+            color: #fff;
+            padding: 15px 20px;
+        }
+        
+        .map-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .map-image {
+            width: 100%;
+            height: 300px;            
+            object-fit: cover;       
+            display: block;          
+        }
+        
+        /* Contact Details Card */
+        .contact-details-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .contact-details-header {
+            background: #d4a574;
+            color: #fff;
+            padding: 15px 20px;
+        }
+        
+        .contact-details-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .contact-details-body {
+            padding: 20px;
+        }
+        
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-detail-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-detail-icon {
+            width: 20px;
+            height: 20px;
+            color: #d4a574;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .contact-detail-item span {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        /* Quick Actions Card - Gold themed */
+        .quick-action-card {
+            background: linear-gradient(135deg, #f5e6d3 0%, #fdf6ed 100%);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            border: 1px solid #e8d5c0;
+        }
+        
+        .quick-action-card h3 {
+            color: #8b6914;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .quick-action-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .book-now-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .book-now-btn:hover {
+            background: #1a252f;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+        }
+        
+        /* HERO SECTION - Sharp Image Styles */
+        .hero-section {
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(1, 18, 39, 0.7), rgba(0, 35, 77, 0.3)), url('/images/contact-us-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Ensure sharp rendering */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-form-card,
+            .quick-action-card {
+                padding: 25px;
+            }
+            
+            .hero-section {
+                min-height: 350px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- NAVBAR -->
+    <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid d-flex align-items-center">
 
+            <!-- Left Navigation (Desktop) -->
             <ul class="navbar-nav nav-left d-none d-lg-flex flex-row align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="home.html"><i class="bi bi-house-fill"></i> Home</a>
+                    <a class="nav-link mx-lg-2" href="home.html" target="_self">
+                        <i class="bi bi-house-fill"></i> Home
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="services.html"><i class="bi bi-people-fill"></i> Services</a>
+                    <a class="nav-link mx-lg-2" href="services.html" target="_self">
+                        <i class="bi bi-people-fill"></i> Services
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="rooms.html"><i class="bi bi-door-open-fill"></i> Rooms</a>
+                    <a class="nav-link mx-lg-2" href="rooms.html" target="_self">
+                        <i class="bi bi-door-open-fill"></i> Rooms
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="reservations.html"><i class="bi bi-clock-fill"></i>
-                        Reservations</a>
+                    <a class="nav-link mx-lg-2" href="reservations.html" target="_self">
+                        <i class="bi bi-clock-fill"></i> Reservations
+                    </a>
                 </li>
             </ul>
 
-            <a class="navbar-brand flex-shrink-0 mx-3" href="home.html">
+            <!-- Logo -->
+            <a class="navbar-brand flex-shrink-0 mx-3" href="home.html" target="_self">
                 <img src="../images/logo.png" alt="Luxury Hotel Logo" width="70" height="auto">
             </a>
 
+            <!-- Right Navigation (Desktop) -->
             <ul class="navbar-nav nav-right d-none d-lg-flex flex-row align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="aboutus.html"><i class="bi bi-globe-central-south-asia"></i> About
-                        Us</a>
+                    <a class="nav-link mx-lg-2" href="aboutus.html" target="_self">
+                        <i class="bi bi-globe-central-south-asia"></i> About Us
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2 active" href="contactus.html"><i class="bi bi-envelope-fill"></i> Contact
-                        Us</a>
+                    <a class="nav-link mx-lg-2 active" href="contactus.html"><i class="bi bi-envelope-fill"></i> Contact Us</a>
                 </li>
             </ul>
 
+            <!-- Mobile Toggle Button -->
             <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- Mobile Offcanvas Menu -->
             <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
@@ -63,12 +374,12 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reservations.html">Reservations</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contactus.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home.html" target="_self">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html" target="_self">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rooms.html" target="_self">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservations.html" target="_self">Reservations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html" target="_self">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contactus.html" target="_self">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -76,176 +387,292 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+
+    <!-- ==================== HERO SECTION ==================== -->
     <section class="hero-section">
-        <div class="hero-bg"></div>
+        <div class="contactus-hero-bg"></div>
         <div class="container py-4 hero-content">
             <div class="col-12 col-md-8 col-xl-6">
                 <h2 class="display-4 text-start text-white fw-semibold mb-3 hero-title">Contact Us</h2>
+                <p class="text-white hero-subtitle">We're here to help. Reach out to us for any inquiries, reservations, or special requests.</p>
             </div>
         </div>
     </section>
 
-    <!-- MAIN CONTENT - Contact Section -->
+
+    <!-- ==================== MAIN CONTENT ==================== -->
     <main class="contact-section">
         <div class="container">
             <div class="contact-layout">
+                
                 <!-- Contact Form Section -->
                 <div class="contact-form-card">
                     <div class="form-header">
                         <div class="form-title-badge">
-                            <h2>Get In Touch with Us</h2>
+                            <i class="bi bi-envelope-fill"></i>
+                            <h2>Send Us a Message</h2>
                         </div>
+                        <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
                     </div>
 
                     <form id="contactForm" action="#" method="POST">
                         <!-- Name -->
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name"
-                                required>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                placeholder="Enter your name"
+                                required
+                            >
                         </div>
 
                         <!-- Email Address -->
                         <div class="form-group">
                             <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input"
-                                placeholder="Enter your email address" required>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Enter your email address"
+                                required
+                            >
                         </div>
 
                         <!-- Phone Number -->
                         <div class="form-group">
                             <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-input"
-                                placeholder="Enter your phone number">
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input" 
+                                placeholder="Enter your phone number"
+                            >
                         </div>
 
                         <!-- Message -->
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-textarea"
-                                placeholder="How can we help you?" required></textarea>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                placeholder="How can we help you?"
+                                required
+                            ></textarea>
                         </div>
 
                         <!-- Checkboxes -->
                         <div class="checkbox-group">
                             <input type="checkbox" id="offers" name="offers" class="checkbox-input">
                             <label for="offers" class="checkbox-label">
-                                I would like to receive exclusive offers and updates.
+                                I would like to receive exclusive offers and updates from Aurelia Hotel.
                             </label>
                         </div>
 
                         <div class="checkbox-group">
                             <input type="checkbox" id="consent" name="consent" class="checkbox-input" required>
                             <label for="consent" class="checkbox-label">
-                                I consent to having this website store my submitted information.
+                                I consent to having this website store my submitted information. <a href="#" class="privacy-link">Privacy Policy</a>
                             </label>
                         </div>
 
                         <!-- Submit Button -->
                         <button type="submit" class="submit-btn">
-                            Submit Message
+                            <i class="bi bi-send-fill"></i> Send Message
                         </button>
                     </form>
                 </div>
 
                 <!-- Contact Info Section -->
                 <div class="contact-info-section">
-                    <!-- Map Container -->
+                    
+                    <!-- Map Container with Interactive Map -->
                     <div class="map-container">
                         <div class="map-header">
-                            <h3>Visit Us</h3>
+                            <h3><i class="bi bi-geo-alt-fill"></i> Find Us</h3>
                         </div>
-                        <img src="/images/map.png" alt="Location Map" class="map-image">
+                        <div class="map-wrapper">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.802548850039!2d121.0186!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMzJzE3LjAiTiAxMjHCsDAxJzA3LjAiRQ!5e0!3m2!1sen!2sph!4v1609459200000!5m2!1sen!2sph"
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <div class="map-overlay">
+                                <div class="location-pin">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>Aurelia Grand Hotel</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-footer">
+                            <a href="https://maps.google.com/?q=14.5547,121.0186" target="_blank" class="directions-btn">
+                                <i class="bi bi-signpost-split"></i> Get Directions
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Contact Details Card -->
                     <div class="contact-details-card">
                         <div class="contact-details-header">
-                            <h3>Hotel Contact Details</h3>
+                            <h3><i class="bi bi-info-circle-fill"></i> Contact Information</h3>
                         </div>
                         <div class="contact-details-body">
                             <div class="contact-detail-item">
-                                <i class="bi bi-telephone-fill contact-detail-icon"></i>
-                                <span>Phone Number: 01234567890</span>
+                                <div class="detail-icon-wrapper">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Phone</span>
+                                    <span class="detail-value">+1 (555) 123-4567</span>
+                                </div>
                             </div>
 
                             <div class="contact-detail-item">
-                                <i class="bi bi-envelope-fill contact-detail-icon"></i>
-                                <span>Email: contact@aureliahotel.com</span>
+                                <div class="detail-icon-wrapper">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">contact@aureliahotel.com</span>
+                                </div>
                             </div>
 
                             <div class="contact-detail-item">
-                                <i class="bi bi-geo-alt-fill contact-detail-icon"></i>
-                                <span>Address: 111 Street, 111 Block, Metro City</span>
+                                <div class="detail-icon-wrapper">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Address</span>
+                                    <span class="detail-value">123 Luxury Avenue, Makati City, Metro Manila, Philippines</span>
+                                </div>
                             </div>
 
                             <div class="contact-detail-item">
-                                <i class="bi bi-clock-fill contact-detail-icon"></i>
-                                <span>Help-Desk Opening Hours: 7 AM - 10 PM</span>
+                                <div class="detail-icon-wrapper">
+                                    <i class="bi bi-clock-fill"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Front Desk Hours</span>
+                                    <span class="detail-value">24/7 - Always Open</span>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Card -->
+                    <div class="social-media-card">
+                        <h3><i class="bi bi-share-fill"></i> Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" title="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Twitter">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Quick Actions Card -->
                     <div class="quick-action-card">
-                        <h3>Need Immediate Assistance?</h3>
-                        <p>
-                            Our reservation team is available 24/7 to help you with your booking.
-                        </p>
-                        <a href="reservations.html" class="book-now-btn">
-                            Book Now
+                        <h3><i class="bi bi-headset"></i> Need Immediate Assistance?</h3>
+                        <p>Our reservation team is available 24/7 to help you with your booking and inquiries.</p>
+                        <a href="reservations.html" class="book-now-btn" target="_self">
+                            <i class="bi bi-calendar-check"></i> Book a Room
                         </a>
                     </div>
+
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- FOOTER -->
+
+    <!-- ==================== FOOTER ==================== -->
     <div class="container-fluid border-top footer-section">
         <div class="container">
-            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-3">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 my-3">
+
+                <!-- Logo & Description -->
                 <div class="col">
-                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                    <a href="home.html" class="d-flex align-items-center mb-3 link-dark text-decoration-none" target="_self">
                         <img src="../images/logo.png" alt="Aurelia Logo" width="110" height="auto">
                     </a>
-                    <p class="text-muted">
+                    <p class="text-dark">
                         Indulge in refined comfort, timeless style,
                         and exceptional service.
                         Your unforgettable luxury escape begins here.
                     </p>
                 </div>
 
-                <div class="col"></div>
-
+                <!-- FAQ & Policies -->
                 <div class="col">
-                    <h5>FAQ & Policies </h5>
+                    <h5 class="text-dark">FAQ & Policies</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ Accordion</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Policy Tables</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sitemap</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQ Accordion</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Policy Tables</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Sitemap</a></li>
                     </ul>
                 </div>
 
+                <!-- Gallery -->
                 <div class="col">
-                    <h5>Gallery</h5>
+                    <h5 class="text-dark">Gallery</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Satisfied Customers</a>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-dark">Satisfied Customers</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">History</a></li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-dark">History</a>
+                        </li>
                     </ul>
                 </div>
 
+                <!-- Page Developer -->
                 <div class="col">
-                    <h5>Page Developer</h5>
-                    <p class="text-muted">
-                        Marcus Tenoria
-                    </p>
+                    <h5 class="text-dark">Page Developer</h5>
+                    <p class="text-dark">Marcus Tenoria</p>
                 </div>
+
             </footer>
         </div>
     </div>
+
+
+    <!-- ==================== SUCCESS MODAL ==================== -->
+    <div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal-content">
+                <div class="modal-body text-center p-5">
+                    <div class="success-icon">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h3 class="modal-title mb-3">Message Sent Successfully!</h3>
+                    <p class="modal-message mb-4">
+                        Thank you for reaching out to Aurelia Luxury Hotel. Our team will review your message and get back to you within 24 hours.
+                    </p>
+                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal">
+                        <i class="bi bi-check-lg"></i> Got It
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -256,7 +683,12 @@
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
+            
+            // Show success modal
+            const successModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
+            successModal.show();
+            
+            // Reset form
             this.reset();
         });
 
