@@ -1365,7 +1365,7 @@ body {
     min-height: 500px;
     display: flex;
     align-items: center;
-    margin-top: 76px;
+    margin-top: 0;
 }
 
 .rooms-hero-bg {
