@@ -398,7 +398,7 @@ main {
 /* GALLERY HERO */
 .gallery-hero {
     background: linear-gradient(to right, rgba(1, 18, 39, 0.8), rgba(1, 18, 39, 0.3)),
-        url('../images/banner.png');
+        url('./images/banner.png');
     background-size: cover;
     background-position: center;
     padding: 120px 0;
@@ -725,7 +725,7 @@ body {
     position: absolute;
     inset: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('../images/reservationhero.jpg') center/cover no-repeat;
+    url('./images/reservationhero.jpg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -1155,7 +1155,7 @@ body {
     position: absolute;
     inset: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
-        url('../images/roomshero.jpg') center/cover no-repeat;
+    url('./images/roomshero.jpg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -1844,7 +1844,7 @@ body {
 .contactus-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(to right, rgba(1, 18, 39, 0.7), rgba(0, 35, 77, 0.3)), url('../images/contactushero.jpg');
+    background-image: linear-gradient(to right, rgba(1, 18, 39, 0.7), rgba(0, 35, 77, 0.3)), url('./images/contactushero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
