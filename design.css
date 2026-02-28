@@ -2415,6 +2415,169 @@ main {
 }
 
 /* ============================================
+   PALETTE + FONT SYNC (SERVICES / CONTACT / ROOMS / RESERVATIONS)
+   Keeps navbar and footer untouched
+   ============================================ */
+
+/* Palette reference:
+   Night: #0B0B0B
+   Jet: #333533
+   Eggshell: #F2ECDD
+   Saffron: #F5CB5C
+   Satin Sheen Gold: #CD9C20
+*/
+
+.services-intro-section,
+.services-grid-section,
+.quick-services-section,
+.cta-section,
+.testimonials-section,
+.contact-section,
+.rooms-intro-section,
+.rooms-showcase-section,
+.form-section,
+.comparison-section,
+.policies-section {
+    font-family: 'Source Sans 3', 'Canva Sans', sans-serif;
+}
+
+.services-intro-section,
+.services-grid-section,
+.testimonials-section,
+.contact-section,
+.rooms-intro-section,
+.rooms-showcase-section,
+.form-section,
+.comparison-section,
+.policies-section {
+    background-color: #F2ECDD;
+}
+
+.quick-services-section,
+.cta-section {
+    background-color: #F5CB5C;
+}
+
+.section-title,
+.service-name,
+.room-name,
+.form-label,
+.payment-title,
+.detail-label,
+.detail-value,
+.quick-action-card h3,
+.contact-details-header h3,
+.map-header h3,
+.summary-header h3 {
+    color: #333533;
+}
+
+.section-description,
+.service-description,
+.room-description,
+.quick-action-card p,
+.checkbox-label,
+.review-count,
+.room-type-desc,
+.payment-description,
+.summary-item,
+.contact-detail-item {
+    color: #333533;
+}
+
+.section-badge,
+.form-title-badge,
+.summary-header,
+.map-header,
+.contact-details-header {
+    background: #CD9C20;
+    color: #0B0B0B;
+}
+
+.service-card-large,
+.room-card,
+.quick-service-card,
+.contact-form-card,
+.contact-details-card,
+.map-container,
+.summary-card,
+.info-card,
+.form-card,
+.quick-action-card,
+.social-media-card {
+    background: #F2ECDD;
+    border: 1px solid rgba(51, 53, 51, 0.12);
+    box-shadow: 0 6px 22px rgba(11, 11, 11, 0.08);
+}
+
+.service-icon-wrapper,
+.detail-icon-wrapper {
+    background: #CD9C20;
+}
+
+.service-icon-wrapper i,
+.detail-icon-wrapper i {
+    color: #0B0B0B;
+}
+
+.btn-book-service,
+.btn-book-now,
+.btn-cta,
+.submit-btn,
+.book-now-btn,
+.btn-book-modal {
+    background: #CD9C20;
+    color: #0B0B0B;
+    border-color: #CD9C20;
+}
+
+.btn-book-service:hover,
+.btn-book-now:hover,
+.btn-cta:hover,
+.submit-btn:hover,
+.book-now-btn:hover,
+.btn-book-modal:hover {
+    background: #F5CB5C;
+    color: #0B0B0B;
+    border-color: #F5CB5C;
+}
+
+.btn-learn-more,
+.btn-view-details,
+.btn-view-room,
+.directions-btn {
+    color: #333533;
+    border-color: #CD9C20;
+}
+
+.btn-learn-more:hover,
+.btn-view-details:hover,
+.btn-view-room:hover,
+.directions-btn:hover {
+    background: #CD9C20;
+    color: #0B0B0B;
+}
+
+.form-input,
+.form-textarea,
+.payment-method,
+.room-option,
+.credit-card-form,
+.paypal-info {
+    background: #F2ECDD;
+    border-color: rgba(51, 53, 51, 0.2);
+    color: #333533;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.payment-method.active,
+.room-option.selected {
+    border-color: #CD9C20;
+    box-shadow: 0 0 0 3px rgba(205, 156, 32, 0.2);
+}
+
+/* ============================================
    SERVICES PAGE STYLES - AURELIA LUXURY HOTEL
    ============================================ */
 
