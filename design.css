@@ -2589,6 +2589,29 @@ main {
     border-color: #CD9C20;
 }
 
+.testimonials-table {
+    background: #F2ECDD;
+    border: 1px solid rgba(51, 53, 51, 0.18);
+}
+
+.testimonials-table thead th {
+    background: #F5CB5C;
+    color: #333533;
+    border-bottom: 1px solid rgba(51, 53, 51, 0.2);
+    font-weight: 700;
+}
+
+.testimonials-table tbody td {
+    background: #F2ECDD;
+    color: #333533;
+    border-color: rgba(51, 53, 51, 0.15);
+}
+
+.testimonials-table .testimonial-stars {
+    color: #CD9C20;
+    white-space: nowrap;
+}
+
 .btn-learn-more,
 .btn-view-details,
 .btn-view-room,
