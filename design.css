@@ -713,7 +713,7 @@ body {
 }
 
 .hero-section {
-    margin-top: 86px;
+    margin-top: 56px;
     position: relative;
     min-height: 500px;
     display: flex;
@@ -1143,7 +1143,7 @@ body {
 }
 
 .hero-section {
-    margin-top: 86px;
+    margin-top:56px;
     position: relative;
     min-height: 500px;
     display: flex;
