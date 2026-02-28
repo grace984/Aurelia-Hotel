@@ -2415,6 +2415,39 @@ main {
 }
 
 /* ============================================
+   FINAL LIGHT PALETTE OVERRIDE
+   Replace remaining dark navy blocks with #F2ECDD
+   ============================================ */
+.quick-action-card,
+.cta-card,
+.contact-details-header,
+.room-price-badge.featured,
+.room-category.luxury,
+.btn-book-now.luxury-btn {
+    background: #F2ECDD !important;
+    color: #333533 !important;
+}
+
+.quick-action-card h3,
+.quick-action-card p,
+.quick-action-card h3 i,
+.cta-card h3,
+.cta-card p,
+.contact-details-header h3,
+.room-category.luxury,
+.room-price-badge.featured .price,
+.room-price-badge.featured .per-night,
+.btn-book-now.luxury-btn {
+    color: #333533 !important;
+}
+
+.btn-book-now.luxury-btn:hover {
+    background: #F2ECDD !important;
+    color: #333533 !important;
+    box-shadow: 0 4px 15px rgba(51, 53, 51, 0.2) !important;
+}
+
+/* ============================================
    PALETTE + FONT SYNC (SERVICES / CONTACT / ROOMS / RESERVATIONS)
    Keeps navbar and footer untouched
    ============================================ */
