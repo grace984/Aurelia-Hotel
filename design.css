@@ -2575,6 +2575,20 @@ main {
     border-color: #F5CB5C;
 }
 
+.btn-book-now,
+.book-now-btn {
+    background: #F5CB5C;
+    color: #0B0B0B;
+    border-color: #F5CB5C;
+}
+
+.btn-book-now:hover,
+.book-now-btn:hover {
+    background: #CD9C20;
+    color: #0B0B0B;
+    border-color: #CD9C20;
+}
+
 .btn-learn-more,
 .btn-view-details,
 .btn-view-room,
