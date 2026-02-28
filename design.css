@@ -2415,6 +2415,66 @@ main {
 }
 
 /* ============================================
+   ROOMS COLOR CONSISTENCY FIX
+   Make Presidential Suite match other room cards
+   ============================================ */
+.room-price-badge.featured {
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4) !important;
+}
+
+.room-price-badge.featured .price,
+.room-price-badge.featured .per-night {
+    color: #fff !important;
+}
+
+.room-category.luxury {
+    background: #f5e6d3 !important;
+    color: #8b6914 !important;
+}
+
+.btn-book-now.luxury-btn {
+    background: #F5CB5C !important;
+    color: #0B0B0B !important;
+    border-color: #F5CB5C !important;
+}
+
+.btn-book-now.luxury-btn:hover {
+    background: #CD9C20 !important;
+    color: #0B0B0B !important;
+    border-color: #CD9C20 !important;
+    box-shadow: 0 4px 15px rgba(205, 156, 32, 0.35) !important;
+}
+
+/* ============================================
+   BOOK NOW CLARITY IMPROVEMENT
+   ============================================ */
+.btn-book-now,
+.book-now-btn {
+    background: #F5CB5C !important;
+    color: #0B0B0B !important;
+    border: 2px solid #CD9C20 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(205, 156, 32, 0.25) !important;
+}
+
+.btn-book-now i,
+.book-now-btn i {
+    color: #0B0B0B !important;
+}
+
+.btn-book-now:hover,
+.book-now-btn:hover,
+.btn-book-now:focus-visible,
+.book-now-btn:focus-visible {
+    background: #CD9C20 !important;
+    color: #0B0B0B !important;
+    border-color: #CD9C20 !important;
+    box-shadow: 0 0 0 3px rgba(245, 203, 92, 0.35) !important;
+}
+
+/* ============================================
    FINAL LIGHT PALETTE OVERRIDE
    Replace remaining dark navy blocks with #F2ECDD
    ============================================ */
