@@ -393,6 +393,7 @@ main {
     /* increase this until the text clears the title */
 }
 
+
 .story-title {
     position: absolute;
     top: 0;
@@ -435,7 +436,11 @@ main {
 @media (max-width: 576px) {
     .story-title {
         left: 0;
-        /* flush to the card edge, no left hang */
+        font-size: 1.5rem;
+    }
+
+    .story-card {
+        padding: 20px 15px;
     }
 
     .section-img {
@@ -443,7 +448,6 @@ main {
         height: 200px;
     }
 }
-
 
 /* ==================== HOME PAGE ==================== */
 /* home inclusions */
