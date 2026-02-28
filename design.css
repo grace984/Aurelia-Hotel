@@ -448,10 +448,12 @@ main {
 /* ==================== HOME PAGE ==================== */
 /* home inclusions */
 .story-paragraph {
-    font-size: 26px;
-    margin-top: 40px;   /* increase this for more top padding */
-    margin-left: -35px; /* negative value moves it left */
-    margin-bottom: 10px !important;
+    font-size: clamp(1.1rem, 4vw, 1.78rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    margin: 30px 0 10px 0; /* more top, less bottom */
 }
 
 /* home cards */
@@ -459,8 +461,20 @@ main {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    height: 400px;
+    height: 400px; /* default for large screens */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        height: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-card {
+        height: 180px;
+    }
 }
 
 .feature-card img {
