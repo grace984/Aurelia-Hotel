@@ -600,6 +600,8 @@ main {
 .collapsible[open] summary::before {
     content: '↑';
     font-size: 1.4rem;
+    background-color: #fbf0bfcb;
+    color: #000000;
 }
 
 /* remove default browser marker */
@@ -609,6 +611,7 @@ main {
 }
 
 .collapsible[open] summary {
+    background-color: #fbf0bfcb;
     color: #000000; /* black when open */
 }
 
@@ -617,6 +620,11 @@ main {
     padding: 5px 16px;
     margin: 10px;
     color: #737070;
+    font-size: 19px;
+}
+
+.collapsible[open] p {
+    color: #000000; /* black when open */
 }
 
 /* Simple, student-style layout for services page */
