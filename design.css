@@ -10,6 +10,16 @@
 
 .navbar {
     background: linear-gradient(to right, #f1d38b 0%, #F2ECE0 30%, #F2ECE0 75%, #f1d38b 100%);
+    min-height: 86px;
+}
+
+.navbar .container-fluid {
+    min-height: 86px;
+}
+
+.navbar-brand img {
+    height: 54px;
+    width: auto;
 }
 
 /* ==================== FOOTER ==================== */
@@ -17,6 +27,21 @@
     background: linear-gradient(to right, #f3d37b 38%, #e4bd64 88%);
     margin-bottom: 0 !important;
     padding-bottom: 0;
+}
+
+.footer-section footer {
+    min-height: 280px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.bsb-hero-6 {
+    margin-top: 86px;
+    min-height: 500px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 /* ==================== GENERAL BODY AND LAYOUT ==================== */
@@ -798,11 +823,11 @@ body {
 }
 
 .hero-section {
-    margin-top: 60px;
+    margin-top: 86px;
     position: relative;
-    min-height: 210px;
+    min-height: 500px;
     display: flex;
-    align-items: end;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -816,7 +841,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    padding-bottom: 24px;
+    padding-bottom: 0;
 }
 
 .hero-title {
@@ -1228,11 +1253,11 @@ body {
 }
 
 .hero-section {
-    margin-top: 60px;
+    margin-top: 86px;
     position: relative;
-    min-height: 220px;
+    min-height: 500px;
     display: flex;
-    align-items: end;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -1246,7 +1271,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    padding-bottom: 26px;
+    padding-bottom: 0;
 }
 
 .hero-title {
@@ -1544,7 +1569,7 @@ body {
 
 @media (max-width: 991px) {
     .hero-section {
-        min-height: 190px;
+        min-height: 380px;
     }
 
     .room-image-wrapper {
@@ -1557,6 +1582,17 @@ body {
 
     .comparison-table {
         font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bsb-hero-6,
+    .hero-section {
+        min-height: 350px !important;
+    }
+
+    .footer-section footer {
+        min-height: 240px;
     }
 }
 
