@@ -570,25 +570,53 @@ main {
 /* ==================== END HOME PAGE ==================== */
 
 /* ==================== FAQ PAGE ==================== */
-.collapsible summary {
-    background-color: #F2ECDD; /* Background for the always-visible part */
-    border: 5px solid #f5cb5c;
-    cursor: pointer; /* Remove pointer cursor */
-    padding: 5px;
-    font-size: 19px;
-    margin: 15px;
-    border-radius: 15px;
-  }
-.collapsible p {
-    background-color: #F2ECDD; /* Background for the collapsible content */
-    padding: 5px;
-    margin: 10px;
-  }
+.collapsible {
+    border: 2px solid #f5cb5c;
+    border-radius: 20px;
+    margin: 10px 15px;
+    overflow: hidden;
+    background-color: #fdf9ec;
+}
 
-  .scroll-box {
-  height: 300px;
-  overflow-y: scroll;
-  border: 0px solid black;
+.collapsible summary {
+    background-color: #fdf9ec;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 19px;
+    border-radius: 20px;
+    color: #737070;
+    list-style: none; /* removes default triangle */
+    display: flex;
+    flex-direction: row-reverse; /* pushes arrow to the right */
+    justify-content: space-between;
+}
+
+.collapsible summary::before {
+    content: '↓';
+    color: #737070;
+    font-size: 1.4rem;
+}
+
+.collapsible[open] summary::before {
+    content: '↑';
+    font-size: 1.4rem;
+}
+
+/* remove default browser marker */
+.collapsible summary::-webkit-details-marker {
+    display: none;
+    color: #737070; /* grey when closed */
+}
+
+.collapsible[open] summary {
+    color: #000000; /* black when open */
+}
+
+.collapsible p {
+    background-color: transparent;
+    padding: 5px 16px;
+    margin: 10px;
+    color: #737070;
 }
 
 /* Simple, student-style layout for services page */
