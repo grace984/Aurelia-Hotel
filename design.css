@@ -586,3 +586,167 @@ main {
   overflow-y: scroll;
   border: 0px solid black;
 }
+
+/* Simple, student-style layout for services page */
+
+.services-main {
+    background-color: #f9f6ef;
+}
+
+.services-hero {
+    background: linear-gradient(rgba(28, 24, 18, 0.65), rgba(28, 24, 18, 0.65)),
+        url("../images/service-restaurant.jpg") center/cover no-repeat;
+    color: #ffffff;
+    padding: 110px 0 80px;
+    margin-top: 80px;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services-subtitle {
+    margin-bottom: 16px;
+    max-width: 520px;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    color: #5c5a55;
+}
+
+.services-intro,
+.services-extra,
+.services-testimonials,
+.services-cta {
+    padding: 40px 0;
+}
+
+.services-list {
+    padding: 10px 0 30px;
+}
+
+.service-row {
+    background-color: #ffffff;
+    border: 1px solid #e6e0d2;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.service-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 220px;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.service-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 14px;
+}
+
+.service-features li {
+    margin-bottom: 6px;
+    color: #514f4a;
+}
+
+.service-features i {
+    color: #7a5a2e;
+    margin-right: 6px;
+}
+
+.extra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.extra-item {
+    background-color: #ffffff;
+    border: 1px solid #e6e0d2;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+}
+
+.extra-item i {
+    color: #7a5a2e;
+    margin-right: 6px;
+}
+
+.service-hours {
+    background-color: #ffffff;
+    border: 1px solid #e6e0d2;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.service-hours h3 {
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.hours-note {
+    font-size: 0.9rem;
+    color: #6b6760;
+    margin-top: 6px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid #e6e0d2;
+    border-radius: 10px;
+    padding: 14px 16px;
+    height: 100%;
+}
+
+.testimonial-quote {
+    margin-bottom: 8px;
+}
+
+.testimonial-name {
+    font-size: 0.9rem;
+    color: #6b6760;
+    margin-bottom: 0;
+}
+
+.services-cta .cta-box {
+    background-color: #ffffff;
+    border: 1px solid #e6e0d2;
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-cta .btn {
+    margin-right: 6px;
+}
+
+@media (max-width: 991px) {
+    .services-hero {
+        margin-top: 70px;
+        padding: 90px 0 60px;
+    }
+}
