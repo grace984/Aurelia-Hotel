@@ -2415,7 +2415,7 @@ main {
 }
 
 /* ============================================
-   ROOMS PAGE STYLES - AURELIA LUXURY HOTEL
+   SERVICES PAGE STYLES - AURELIA LUXURY HOTEL
    ============================================ */
 
 /* ============================================
@@ -2429,14 +2429,14 @@ main {
     margin-top: 76px;
 }
 
-.rooms-hero-bg {
+.services-hero-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to right, rgba(1, 18, 39, 0.75), rgba(0, 35, 77, 0.4)), 
-                      url('../images/roomshero.jpg');
+                      url('../images/serviceshero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2458,14 +2458,14 @@ main {
     font-size: 1.1rem;
     opacity: 0.9;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    max-width: 500px;
+    max-width: 550px;
 }
 
 
 /* ============================================
-   ROOMS INTRO SECTION
+   SERVICES INTRO SECTION
    ============================================ */
-.rooms-intro-section {
+.services-intro-section {
     padding: 80px 0 50px;
     background-color: #f8f9fa;
 }
@@ -2500,14 +2500,14 @@ main {
 
 
 /* ============================================
-   ROOMS SHOWCASE SECTION
+   SERVICES GRID SECTION
    ============================================ */
-.rooms-showcase-section {
+.services-grid-section {
     padding: 50px 0 80px;
     background-color: #f8f9fa;
 }
 
-.room-card {
+.service-card-large {
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
@@ -2516,111 +2516,123 @@ main {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.room-card:hover {
+.service-card-large:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.room-image-col {
+.service-image-col {
     position: relative;
 }
 
-.room-image-wrapper {
+.service-image-wrapper {
     position: relative;
     height: 100%;
-    min-height: 350px;
+    min-height: 380px;
     overflow: hidden;
 }
 
-.room-image {
+.service-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.room-card:hover .room-image {
+.service-card-large:hover .service-image {
     transform: scale(1.05);
 }
 
-.room-price-badge {
+.service-overlay {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    bottom: 20px;
+    left: 20px;
+}
+
+.service-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 15px 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-.room-price-badge.featured {
-    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.4);
-}
-
-.room-price-badge .price {
-    display: block;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.room-price-badge .per-night {
-    font-size: 0.85rem;
-    opacity: 0.9;
-}
-
-.room-content-col {
+.service-content-col {
     padding: 0;
 }
 
-.room-content {
+.service-content {
     padding: 40px;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.room-category {
-    display: inline-block;
-    background: #f5e6d3;
-    color: #8b6914;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    width: fit-content;
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.room-category.luxury {
-    background: #2c3e50;
-    color: #d4a574;
+.service-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.room-name {
-    font-size: 2rem;
+.service-icon-wrapper i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.service-rating {
+    text-align: right;
+}
+
+.service-rating .stars {
+    display: block;
+    color: #ffc107;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.service-rating .stars i {
+    margin-right: 2px;
+}
+
+.service-rating .review-count {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.service-name {
+    font-size: 1.8rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 15px;
 }
 
-.room-description {
+.service-description {
     font-size: 1rem;
     color: #666;
     line-height: 1.7;
     margin-bottom: 25px;
 }
 
-.room-features {
+.service-features {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .feature-item {
@@ -2632,46 +2644,23 @@ main {
 }
 
 .feature-item i {
-    color: #d4a574;
-    font-size: 1.1rem;
+    color: #28a745;
+    font-size: 1rem;
 }
 
-.room-amenities {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.amenity-tag {
-    background: #f8f6f3;
-    color: #666;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.amenity-tag i {
-    color: #d4a574;
-    font-size: 0.9rem;
-}
-
-.room-actions {
+.service-actions {
     display: flex;
     gap: 15px;
     margin-top: auto;
 }
 
-.btn-book-now {
+.btn-book-service {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
     color: #fff;
-    padding: 14px 30px;
+    padding: 14px 28px;
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
@@ -2679,29 +2668,20 @@ main {
     border: none;
 }
 
-.btn-book-now:hover {
+.btn-book-service:hover {
     background: linear-gradient(135deg, #c9965e 0%, #b8854d 100%);
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
 }
 
-.btn-book-now.luxury-btn {
-    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-}
-
-.btn-book-now.luxury-btn:hover {
-    background: linear-gradient(135deg, #1a252f 0%, #0d1218 100%);
-    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.4);
-}
-
-.btn-view-details {
+.btn-learn-more {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     background: transparent;
     color: #d4a574;
-    padding: 14px 30px;
+    padding: 14px 28px;
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
@@ -2709,126 +2689,89 @@ main {
     border: 2px solid #d4a574;
 }
 
-.btn-view-details:hover {
+.btn-learn-more:hover {
     background: #d4a574;
     color: #fff;
 }
 
 
 /* ============================================
-   ROOM COMPARISON TABLE
+   QUICK SERVICES SECTION
    ============================================ */
-.comparison-section {
+.quick-services-section {
     padding: 80px 0;
     background: #fff;
 }
 
-.comparison-section .section-header {
+.quick-services-section .section-header {
     margin-bottom: 50px;
 }
 
-.comparison-table-wrapper {
+.col-lg-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.quick-service-card {
+    background: #f8f9fa;
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-}
-
-.comparison-table {
-    margin-bottom: 0;
-    font-size: 0.95rem;
-}
-
-.comparison-table thead th {
-    background: #f8f6f3;
-    color: #333;
-    font-weight: 600;
-    padding: 25px 20px;
-    border: none;
+    padding: 35px 25px;
     text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
 }
 
-.comparison-table thead th:first-child {
-    text-align: left;
-    background: #f1e9e0;
-}
-
-.comparison-table thead th.featured {
+.quick-service-card:hover {
     background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
-    color: #fff;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
 }
 
-.room-header .room-type {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.room-header .room-rate {
-    display: block;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.comparison-table tbody td {
-    padding: 18px 20px;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-    color: #555;
-    vertical-align: middle;
-}
-
-.comparison-table tbody td:first-child {
-    text-align: left;
-    font-weight: 500;
-    color: #333;
-    background: #faf8f5;
-}
-
-.comparison-table tbody td:first-child i {
-    color: #d4a574;
-    margin-right: 8px;
-}
-
-.comparison-table tbody td.featured {
-    background: #fdf9f4;
-    font-weight: 500;
-}
-
-.comparison-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-.check-icon {
-    color: #28a745;
-    font-size: 1.2rem;
-}
-
-.x-icon {
-    color: #dc3545;
-    font-size: 1.2rem;
-    opacity: 0.5;
-}
-
-.action-row td {
-    padding: 25px 20px !important;
-}
-
-.btn-table-book {
-    display: inline-block;
-    background: #d4a574;
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
+.quick-service-icon {
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
-.btn-table-book:hover {
-    background: #c9965e;
+.quick-service-card:hover .quick-service-icon {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.quick-service-icon i {
+    font-size: 1.8rem;
+    color: #d4a574;
+}
+
+.quick-service-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.quick-service-card:hover h4 {
     color: #fff;
-    transform: translateY(-2px);
+}
+
+.quick-service-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.quick-service-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 
@@ -2884,110 +2827,256 @@ main {
 /* ============================================
    MODAL STYLES
    ============================================ */
-.room-modal-content {
+.service-modal-content {
     border: none;
     border-radius: 16px;
     overflow: hidden;
 }
 
-.room-modal-content .modal-header {
+.service-modal-content .modal-header {
     background: #f8f6f3;
     border-bottom: 1px solid #eee;
     padding: 20px 25px;
 }
 
-.room-modal-content .modal-title {
+.service-modal-content .modal-title {
     font-weight: 700;
     color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.room-modal-content .modal-body {
+.service-modal-content .modal-title i {
+    color: #d4a574;
+    font-size: 1.3rem;
+}
+
+.service-modal-content .modal-body {
     padding: 0;
 }
 
-.modal-room-image {
+.modal-service-image {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: cover;
 }
 
-.modal-room-info {
+.modal-service-info {
     padding: 25px;
 }
 
-.modal-room-info h4 {
+.modal-service-info h4 {
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
 }
 
-.amenities-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-bottom: 25px;
+.treatment-list {
+    margin-bottom: 20px;
 }
 
-.amenity-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #555;
-    font-size: 0.95rem;
-}
-
-.amenity-item i {
-    color: #d4a574;
-}
-
-.room-policy {
-    background: #f8f6f3;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.room-policy h5 {
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.room-policy h5 i {
-    color: #d4a574;
-    margin-right: 8px;
-}
-
-.room-policy ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.room-policy ul li {
-    padding: 5px 0;
-    color: #666;
-    font-size: 0.95rem;
-}
-
-.room-modal-content .modal-footer {
-    background: #f8f6f3;
-    border-top: 1px solid #eee;
-    padding: 20px 25px;
+.treatment-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.modal-price {
-    font-size: 1.8rem;
+.treatment-item:last-child {
+    border-bottom: none;
+}
+
+.treatment-name {
+    color: #555;
+}
+
+.treatment-price {
     font-weight: 700;
     color: #d4a574;
 }
 
-.modal-price small {
-    font-size: 1rem;
-    color: #999;
-    font-weight: 400;
+.amenities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+.amenities-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: #555;
+}
+
+.amenities-list li i {
+    color: #28a745;
+}
+
+.cabana-info,
+.trainer-info {
+    background: #f8f6f3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cabana-info h5,
+.trainer-info h5 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cabana-info p,
+.trainer-info p {
+    color: #d4a574;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.cabana-info small,
+.trainer-info small {
+    color: #888;
+}
+
+.venue-list {
+    margin-bottom: 20px;
+}
+
+.venue-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.venue-item:last-child {
+    border-bottom: none;
+}
+
+.venue-item h5 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.venue-item p {
+    color: #666;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.service-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f6f3;
+    border-radius: 10px;
+}
+
+.service-grid-item i {
+    font-size: 1.5rem;
+    color: #d4a574;
+}
+
+.service-grid-item span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.contact-info-box {
+    background: linear-gradient(135deg, #f5e6d3 0%, #fdf6ed 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e8d5c0;
+}
+
+.contact-info-box h5 {
+    font-weight: 600;
+    color: #8b6914;
+    margin-bottom: 15px;
+}
+
+.contact-info-box p {
+    color: #555;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info-box p i {
+    color: #d4a574;
+}
+
+.schedule-list {
+    margin-bottom: 20px;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-item .time {
+    font-weight: 600;
+    color: #d4a574;
+    width: 80px;
+}
+
+.schedule-item .class {
+    flex: 1;
+    color: #555;
+}
+
+.schedule-item .duration {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.service-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.service-note i {
+    color: #0d6efd;
+    margin-top: 2px;
+}
+
+.service-note span {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.service-modal-content .modal-footer {
+    background: #f8f6f3;
+    border-top: 1px solid #eee;
+    padding: 20px 25px;
+    justify-content: center;
 }
 
 .btn-book-modal {
@@ -2996,7 +3085,7 @@ main {
     gap: 8px;
     background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
     color: #fff;
-    padding: 12px 30px;
+    padding: 12px 35px;
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
@@ -3013,6 +3102,13 @@ main {
 /* ============================================
    RESPONSIVE STYLES
    ============================================ */
+@media (max-width: 1199px) {
+    .col-lg-2-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
 @media (max-width: 991px) {
     .hero-section {
         min-height: 400px;
@@ -3022,16 +3118,24 @@ main {
         font-size: 2rem;
     }
 
-    .room-image-wrapper {
+    .service-image-wrapper {
         min-height: 280px;
     }
 
-    .room-content {
+    .service-content {
         padding: 30px;
     }
 
-    .room-name {
-        font-size: 1.7rem;
+    .service-name {
+        font-size: 1.5rem;
+    }
+
+    .service-features {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .cta-card {
@@ -3057,7 +3161,7 @@ main {
         font-size: 2.2rem !important;
     }
 
-    .rooms-intro-section {
+    .services-intro-section {
         padding: 50px 0 30px;
     }
 
@@ -3065,47 +3169,42 @@ main {
         font-size: 1.7rem;
     }
 
-    .room-card {
+    .service-card-large {
         margin-bottom: 30px;
     }
 
-    .room-image-wrapper {
+    .service-image-wrapper {
         min-height: 220px;
     }
 
-    .room-content {
+    .service-content {
         padding: 25px;
     }
 
-    .room-name {
-        font-size: 1.5rem;
+    .service-name {
+        font-size: 1.4rem;
     }
 
-    .room-features {
-        grid-template-columns: 1fr;
-    }
-
-    .room-actions {
+    .service-actions {
         flex-direction: column;
     }
 
-    .btn-book-now,
-    .btn-view-details {
+    .btn-book-service,
+    .btn-learn-more {
         width: 100%;
         justify-content: center;
     }
 
-    .comparison-table-wrapper {
-        border-radius: 10px;
+    .col-lg-2-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 
-    .comparison-table thead th,
-    .comparison-table tbody td {
-        padding: 12px 10px;
-        font-size: 0.85rem;
+    .quick-service-card {
+        padding: 25px 20px;
     }
 
-    .amenities-grid {
+    .services-grid {
         grid-template-columns: 1fr;
     }
 
@@ -3117,49 +3216,680 @@ main {
         font-size: 1.3rem;
     }
 
-    .modal-room-image {
+    .modal-service-image {
         height: 180px;
-    }
-
-    .modal-price {
-        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 575px) {
-    .room-price-badge {
-        padding: 10px 18px;
+    .col-lg-2-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
-    .room-price-badge .price {
-        font-size: 1.4rem;
+    .service-tag {
+        font-size: 0.8rem;
+        padding: 8px 14px;
     }
 
-    .comparison-table thead {
-        display: none;
+    .service-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
     }
 
-    .comparison-table tbody td {
-        display: block;
-        text-align: right;
-        padding: 10px 15px;
-        border-bottom: 1px solid #eee;
-    }
-
-    .comparison-table tbody td:first-child {
+    .service-rating {
         text-align: left;
-        background: #f1e9e0;
-        font-weight: 600;
+    }
+}
+
+
+/* ============================================
+   NAVBAR ACTIVE STATE OVERRIDE
+   ============================================ */
+.navbar-nav .nav-link.active {
+    color: #8b6914 !important;
+    font-weight: 600;
+}
+
+
+/* ============================================
+   CONTACT US PAGE STYLES - AURELIA LUXURY HOTEL
+   ============================================ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    margin-top: 76px;
+}
+
+.contactus-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(1, 18, 39, 0.75), rgba(0, 35, 77, 0.4)), 
+                      url('../images/contactushero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 700 !important;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+}
+
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ============================================
+   CONTACT FORM CARD
+   ============================================ */
+.contact-form-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-title-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.form-title-badge i {
+    font-size: 1.3rem;
+}
+
+.form-title-badge h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.form-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-label i {
+    color: #d4a574;
+    font-size: 1rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e8e0d5;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #faf8f5;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #d4a574;
+    box-shadow: 0 0 0 4px rgba(212, 165, 116, 0.15);
+    background: #fff;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #aaa;
+}
+
+.form-textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+select.form-input {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 45px;
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: #d4a574;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    color: #555;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.privacy-link {
+    color: #d4a574;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #c9965e 0%, #b8854d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+
+
+/* ============================================
+   CONTACT INFO SECTION
+   ============================================ */
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* ============================================
+   MAP CONTAINER
+   ============================================ */
+.map-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.map-header {
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    color: #fff;
+    padding: 18px 25px;
+}
+
+.map-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.location-pin {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.location-pin i {
+    color: #dc3545;
+    font-size: 1.3rem;
+}
+
+.map-footer {
+    padding: 15px 25px;
+    background: #f8f6f3;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #d4a574;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.directions-btn:hover {
+    color: #c9965e;
+}
+
+
+/* ============================================
+   CONTACT DETAILS CARD
+   ============================================ */
+.contact-details-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.contact-details-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: #fff;
+    padding: 18px 25px;
+}
+
+.contact-details-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details-body {
+    padding: 25px;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-detail-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.contact-detail-item:first-child {
+    padding-top: 0;
+}
+
+.detail-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.detail-icon-wrapper i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* ============================================
+   SOCIAL MEDIA CARD
+   ============================================ */
+.social-media-card {
+    background: linear-gradient(135deg, #f5e6d3 0%, #fdf6ed 100%);
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e8d5c0;
+    text-align: center;
+}
+
+.social-media-card h3 {
+    color: #8b6914;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4a574;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(212, 165, 116, 0.4);
+}
+
+
+/* ============================================
+   QUICK ACTION CARD
+   ============================================ */
+.quick-action-card {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    border-radius: 16px;
+    padding: 30px;
+    color: #fff;
+}
+
+.quick-action-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quick-action-card h3 i {
+    color: #d4a574;
+}
+
+.quick-action-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.book-now-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background: linear-gradient(135deg, #c9965e 0%, #b8854d 100%);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+}
+
+
+/* ============================================
+   SUCCESS MODAL
+   ============================================ */
+.success-modal-content {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.success-modal-content .modal-title {
+    font-weight: 700;
+    color: #1a252f;
+    font-size: 1.5rem;
+}
+
+.modal-message {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.btn-close-modal {
+    padding: 12px 35px;
+    background: linear-gradient(135deg, #d4a574 0%, #c9965e 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-close-modal:hover {
+    background: linear-gradient(135deg, #c9965e 0%, #b8854d 100%);
+    transform: translateY(-2px);
+}
+
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: 400px;
     }
 
-    .comparison-table tbody td::before {
-        content: attr(data-label);
-        float: left;
-        font-weight: 600;
+    .contact-form-card {
+        padding: 30px;
     }
 
-    .action-row td {
-        text-align: center !important;
+    .map-wrapper {
+        height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 350px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem !important;
+    }
+
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-form-card {
+        padding: 25px;
+    }
+
+    .form-title-badge h2 {
+        font-size: 1.1rem;
+    }
+
+    .map-wrapper {
+        height: 200px;
+    }
+
+    .location-pin {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+
+    .contact-detail-item {
+        gap: 12px;
+    }
+
+    .detail-icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .quick-action-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 575px) {
+    .checkbox-group {
+        align-items: flex-start;
+    }
+
+    .checkbox-input {
+        margin-top: 3px;
+    }
+
+    .social-icons {
+        gap: 10px;
     }
 }
 
