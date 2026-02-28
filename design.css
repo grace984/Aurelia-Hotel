@@ -2415,6 +2415,26 @@ main {
 }
 
 /* ============================================
+   ROOMS CTA CONSISTENCY
+   ============================================ */
+.btn-book-now,
+.btn-book-now.luxury-btn {
+    background: #F5CB5C !important;
+    color: #0B0B0B !important;
+    border-color: #F5CB5C !important;
+}
+
+.btn-book-now:hover,
+.btn-book-now.luxury-btn:hover,
+.btn-book-now:focus-visible,
+.btn-book-now.luxury-btn:focus-visible {
+    background: #CD9C20 !important;
+    color: #0B0B0B !important;
+    border-color: #CD9C20 !important;
+    box-shadow: 0 0 0 3px rgba(245, 203, 92, 0.35) !important;
+}
+
+/* ============================================
    ROOMS COLOR CONSISTENCY FIX
    Make Presidential Suite match other room cards
    ============================================ */
@@ -2482,8 +2502,7 @@ main {
 .cta-card,
 .contact-details-header,
 .room-price-badge.featured,
-.room-category.luxury,
-.btn-book-now.luxury-btn {
+.room-category.luxury {
     background: #F2ECDD !important;
     color: #333533 !important;
 }
@@ -2496,15 +2515,8 @@ main {
 .contact-details-header h3,
 .room-category.luxury,
 .room-price-badge.featured .price,
-.room-price-badge.featured .per-night,
-.btn-book-now.luxury-btn {
+.room-price-badge.featured .per-night {
     color: #333533 !important;
-}
-
-.btn-book-now.luxury-btn:hover {
-    background: #F2ECDD !important;
-    color: #333533 !important;
-    box-shadow: 0 4px 15px rgba(51, 53, 51, 0.2) !important;
 }
 
 /* ============================================
