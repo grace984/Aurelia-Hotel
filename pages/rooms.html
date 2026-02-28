@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="rooms-page-simple">
     <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid d-flex align-items-center">
@@ -111,12 +111,11 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <span class="section-badge">Luxury Accommodations</span>
+                    <span class="section-badge">Room Choices</span>
                     <h2 class="section-title">Discover Your Perfect Stay</h2>
                     <p class="section-description">
-                        From cozy city-view rooms to lavish presidential suites, each of our accommodations 
-                        is designed to provide an unforgettable experience. Every room features premium amenities, 
-                        elegant furnishings, and breathtaking views.
+                        We offer two simple Standard Room choices with complete essentials for a comfortable stay.
+                        Pick the setup that fits your trip and reserve quickly.
                     </p>
                 </div>
             </div>
@@ -127,45 +126,28 @@
     <!-- ==================== ROOMS SHOWCASE SECTION ==================== -->
     <section class="rooms-showcase-section">
         <div class="container">
-            
-            <!-- Standard Room -->
+
             <div class="room-card">
-                <div class="row g-0">
+                <div class="row g-0 align-items-stretch">
                     <div class="col-lg-6 room-image-col">
                         <div class="room-image-wrapper">
-                            <img src="../images/room-standard.jpg" alt="Standard Room" class="room-image">
-                            <div class="room-price-badge">
-                                <span class="price">$120</span>
-                                <span class="per-night">/night</span>
-                            </div>
+                            <img src="../images/room-standard.jpg" alt="Standard Room - City View" class="room-image">
                         </div>
                     </div>
                     <div class="col-lg-6 room-content-col">
                         <div class="room-content">
-                            <span class="room-category">Comfort</span>
-                            <h3 class="room-name">Standard Room</h3>
+                            <span class="room-category">Standard</span>
+                            <h3 class="room-name">Standard Room - City View</h3>
+                            <p class="room-price-inline">$120/night</p>
                             <p class="room-description">
-                                A cozy and elegant retreat featuring modern amenities and a stunning city view. 
-                                Perfect for solo travelers or couples seeking comfort and convenience.
+                                Cozy setup for solo travelers or couples, with a city-facing window and complete daily essentials.
                             </p>
-                            
+
                             <div class="room-features">
-                                <div class="feature-item">
-                                    <i class="bi bi-people-fill"></i>
-                                    <span>1-2 Guests</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-fullscreen"></i>
-                                    <span>25 m²</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-wifi"></i>
-                                    <span>Free WiFi</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-cup-hot-fill"></i>
-                                    <span>Breakfast</span>
-                                </div>
+                                <div class="feature-item"><i class="bi bi-people-fill"></i><span>1-2 Guests</span></div>
+                                <div class="feature-item"><i class="bi bi-fullscreen"></i><span>25 m²</span></div>
+                                <div class="feature-item"><i class="bi bi-wifi"></i><span>Free WiFi</span></div>
+                                <div class="feature-item"><i class="bi bi-cup-hot-fill"></i><span>Breakfast</span></div>
                             </div>
 
                             <div class="room-amenities">
@@ -176,11 +158,8 @@
                             </div>
 
                             <div class="room-actions">
-                                <a href="reservations.html?room=standard" class="btn-book-now">
+                                <a href="reservations.html?room=standard-city" class="btn-book-now">
                                     <i class="bi bi-calendar-check"></i> Book Now
-                                </a>
-                                <a href="#" class="btn-view-details" data-bs-toggle="modal" data-bs-target="#standardModal">
-                                    <i class="bi bi-eye"></i> View Details
                                 </a>
                             </div>
                         </div>
@@ -188,119 +167,39 @@
                 </div>
             </div>
 
-            <!-- Deluxe Suite -->
             <div class="room-card room-card-reverse">
-                <div class="row g-0">
+                <div class="row g-0 align-items-stretch">
                     <div class="col-lg-6 room-image-col order-lg-2">
                         <div class="room-image-wrapper">
-                            <img src="../images/room-deluxe.jpg" alt="Deluxe Suite" class="room-image">
-                            <div class="room-price-badge">
-                                <span class="price">$220</span>
-                                <span class="per-night">/night</span>
-                            </div>
+                            <img src="../images/room-deluxe.jpg" alt="Standard Room - Family" class="room-image">
                         </div>
                     </div>
                     <div class="col-lg-6 room-content-col order-lg-1">
                         <div class="room-content">
-                            <span class="room-category">Premium</span>
-                            <h3 class="room-name">Deluxe Suite</h3>
+                            <span class="room-category">Standard</span>
+                            <h3 class="room-name">Standard Room - Family</h3>
+                            <p class="room-price-inline">$150/night</p>
                             <p class="room-description">
-                                Spacious luxury with panoramic ocean views. This suite offers a separate living area, 
-                                premium furnishings, and exclusive access to our rooftop lounge.
+                                Bigger standard setup for small families, with more floor space and practical room layout.
                             </p>
-                            
+
                             <div class="room-features">
-                                <div class="feature-item">
-                                    <i class="bi bi-people-fill"></i>
-                                    <span>2-4 Guests</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-fullscreen"></i>
-                                    <span>45 m²</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-wifi"></i>
-                                    <span>Free WiFi</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-water"></i>
-                                    <span>Ocean View</span>
-                                </div>
+                                <div class="feature-item"><i class="bi bi-people-fill"></i><span>2-3 Guests</span></div>
+                                <div class="feature-item"><i class="bi bi-fullscreen"></i><span>32 m²</span></div>
+                                <div class="feature-item"><i class="bi bi-wifi"></i><span>Free WiFi</span></div>
+                                <div class="feature-item"><i class="bi bi-cup-hot-fill"></i><span>Breakfast</span></div>
                             </div>
 
                             <div class="room-amenities">
-                                <span class="amenity-tag"><i class="bi bi-tv"></i> 2 Smart TVs</span>
+                                <span class="amenity-tag"><i class="bi bi-tv"></i> Smart TV</span>
                                 <span class="amenity-tag"><i class="bi bi-droplet-fill"></i> Mini Bar</span>
-                                <span class="amenity-tag"><i class="bi bi-cup-hot-fill"></i> Coffee Machine</span>
-                                <span class="amenity-tag"><i class="bi bi-umbrella"></i> Balcony</span>
+                                <span class="amenity-tag"><i class="bi bi-wind"></i> AC</span>
+                                <span class="amenity-tag"><i class="bi bi-safe"></i> Safe</span>
                             </div>
 
                             <div class="room-actions">
-                                <a href="reservations.html?room=deluxe" class="btn-book-now">
+                                <a href="reservations.html?room=standard-family" class="btn-book-now">
                                     <i class="bi bi-calendar-check"></i> Book Now
-                                </a>
-                                <a href="#" class="btn-view-details" data-bs-toggle="modal" data-bs-target="#deluxeModal">
-                                    <i class="bi bi-eye"></i> View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Presidential Suite -->
-            <div class="room-card">
-                <div class="row g-0">
-                    <div class="col-lg-6 room-image-col">
-                        <div class="room-image-wrapper">
-                            <img src="../images/room-presidential.jpg" alt="Presidential Suite" class="room-image">
-                            <div class="room-price-badge featured">
-                                <span class="price">$450</span>
-                                <span class="per-night">/night</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 room-content-col">
-                        <div class="room-content">
-                            <span class="room-category luxury">Luxury</span>
-                            <h3 class="room-name">Presidential Suite</h3>
-                            <p class="room-description">
-                                The pinnacle of luxury living. Our Presidential Suite features a master bedroom, 
-                                private dining room, personal butler service, and breathtaking panoramic views.
-                            </p>
-                            
-                            <div class="room-features">
-                                <div class="feature-item">
-                                    <i class="bi bi-people-fill"></i>
-                                    <span>4-6 Guests</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-fullscreen"></i>
-                                    <span>120 m²</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-person-badge"></i>
-                                    <span>Butler Service</span>
-                                </div>
-                                <div class="feature-item">
-                                    <i class="bi bi-water"></i>
-                                    <span>Panoramic View</span>
-                                </div>
-                            </div>
-
-                            <div class="room-amenities">
-                                <span class="amenity-tag"><i class="bi bi-tv"></i> 3 Smart TVs</span>
-                                <span class="amenity-tag"><i class="bi bi-fire"></i> Kitchen</span>
-                                <span class="amenity-tag"><i class="bi bi-droplet"></i> Jacuzzi</span>
-                                <span class="amenity-tag"><i class="bi bi-car-front"></i> Airport Transfer</span>
-                            </div>
-
-                            <div class="room-actions">
-                                <a href="reservations.html?room=presidential" class="btn-book-now luxury-btn">
-                                    <i class="bi bi-calendar-check"></i> Book Now
-                                </a>
-                                <a href="#" class="btn-view-details" data-bs-toggle="modal" data-bs-target="#presidentialModal">
-                                    <i class="bi bi-eye"></i> View Details
                                 </a>
                             </div>
                         </div>
@@ -316,7 +215,6 @@
     <section class="comparison-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-badge">Compare</span>
                 <h2 class="section-title">Room Comparison</h2>
             </div>
 
@@ -325,80 +223,50 @@
                     <thead>
                         <tr>
                             <th>Features</th>
-                            <th class="room-header">
-                                <span class="room-type">Standard Room</span>
-                                <span class="room-rate">$120/night</span>
-                            </th>
-                            <th class="room-header featured">
-                                <span class="room-type">Deluxe Suite</span>
-                                <span class="room-rate">$220/night</span>
-                            </th>
-                            <th class="room-header">
-                                <span class="room-type">Presidential Suite</span>
-                                <span class="room-rate">$450/night</span>
-                            </th>
+                            <th class="room-header">Standard - City View</th>
+                            <th class="room-header">Standard - Family</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><i class="bi bi-people-fill"></i> Max Occupancy</td>
+                            <td>Price</td>
+                            <td>$120/night</td>
+                            <td>$150/night</td>
+                        </tr>
+                        <tr>
+                            <td>Max Occupancy</td>
                             <td>1-2 Guests</td>
-                            <td class="featured">2-4 Guests</td>
-                            <td>4-6 Guests</td>
+                            <td>2-3 Guests</td>
                         </tr>
                         <tr>
-                            <td><i class="bi bi-fullscreen"></i> Room Size</td>
+                            <td>Room Size</td>
                             <td>25 m²</td>
-                            <td class="featured">45 m²</td>
-                            <td>120 m²</td>
+                            <td>32 m²</td>
                         </tr>
                         <tr>
-                            <td><i class="bi bi-tv"></i> Smart TV</td>
+                            <td>Smart TV</td>
                             <td><i class="bi bi-check-circle-fill check-icon"></i></td>
-                            <td class="featured"><i class="bi bi-check-circle-fill check-icon"></i> (2)</td>
-                            <td><i class="bi bi-check-circle-fill check-icon"></i> (3)</td>
-                        </tr>
-                        <tr>
-                            <td><i class="bi bi-wifi"></i> Free WiFi</td>
                             <td><i class="bi bi-check-circle-fill check-icon"></i></td>
-                            <td class="featured"><i class="bi bi-check-circle-fill check-icon"></i></td>
-                            <td><i class="bi bi-check-circle-fill check-icon"></i> (Premium)</td>
                         </tr>
                         <tr>
-                            <td><i class="bi bi-cup-hot-fill"></i> Breakfast Included</td>
+                            <td>Free WiFi</td>
                             <td><i class="bi bi-check-circle-fill check-icon"></i></td>
-                            <td class="featured"><i class="bi bi-check-circle-fill check-icon"></i> (Gourmet)</td>
-                            <td><i class="bi bi-check-circle-fill check-icon"></i> (In-Room)</td>
+                            <td><i class="bi bi-check-circle-fill check-icon"></i></td>
                         </tr>
                         <tr>
-                            <td><i class="bi bi-water"></i> Ocean View</td>
+                            <td>Breakfast Included</td>
+                            <td><i class="bi bi-check-circle-fill check-icon"></i></td>
+                            <td><i class="bi bi-check-circle-fill check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Ocean View</td>
                             <td><i class="bi bi-x-circle-fill x-icon"></i></td>
-                            <td class="featured"><i class="bi bi-check-circle-fill check-icon"></i></td>
-                            <td><i class="bi bi-check-circle-fill check-icon"></i> (Panoramic)</td>
-                        </tr>
-                        <tr>
-                            <td><i class="bi bi-umbrella"></i> Private Balcony</td>
                             <td><i class="bi bi-x-circle-fill x-icon"></i></td>
-                            <td class="featured"><i class="bi bi-check-circle-fill check-icon"></i></td>
-                            <td><i class="bi bi-check-circle-fill check-icon"></i> (Terrace)</td>
-                        </tr>
-                        <tr>
-                            <td><i class="bi bi-person-badge"></i> Butler Service</td>
-                            <td><i class="bi bi-x-circle-fill x-icon"></i></td>
-                            <td class="featured"><i class="bi bi-x-circle-fill x-icon"></i></td>
-                            <td><i class="bi bi-check-circle-fill check-icon"></i></td>
-                        </tr>
-                        <tr>
-                            <td><i class="bi bi-car-front"></i> Airport Transfer</td>
-                            <td><i class="bi bi-x-circle-fill x-icon"></i></td>
-                            <td class="featured"><i class="bi bi-x-circle-fill x-icon"></i></td>
-                            <td><i class="bi bi-check-circle-fill check-icon"></i></td>
                         </tr>
                         <tr class="action-row">
-                            <td></td>
-                            <td><a href="reservations.html?room=standard" class="btn-table-book">Book Now</a></td>
-                            <td class="featured"><a href="reservations.html?room=deluxe" class="btn-table-book">Book Now</a></td>
-                            <td><a href="reservations.html?room=presidential" class="btn-table-book">Book Now</a></td>
+                            <td>Reserve</td>
+                            <td><a href="reservations.html?room=standard-city" class="btn-table-book">Book Now</a></td>
+                            <td><a href="reservations.html?room=standard-family" class="btn-table-book">Book Now</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -426,136 +294,6 @@
         </div>
     </section>
 
-
-
-    <!-- ==================== ROOM DETAILS MODALS ==================== -->
-    
-    <!-- Standard Room Modal -->
-    <div class="modal fade" id="standardModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content room-modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Standard Room Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../images/room-standard.jpg" alt="Standard Room" class="modal-room-image">
-                    <div class="modal-room-info">
-                        <h4>Amenities & Features</h4>
-                        <div class="amenities-grid">
-                            <div class="amenity-item"><i class="bi bi-tv"></i> 43" Smart TV</div>
-                            <div class="amenity-item"><i class="bi bi-wifi"></i> High-Speed WiFi</div>
-                            <div class="amenity-item"><i class="bi bi-wind"></i> Climate Control</div>
-                            <div class="amenity-item"><i class="bi bi-safe"></i> In-Room Safe</div>
-                            <div class="amenity-item"><i class="bi bi-droplet-fill"></i> Mini Refrigerator</div>
-                            <div class="amenity-item"><i class="bi bi-cup-hot-fill"></i> Coffee/Tea Maker</div>
-                            <div class="amenity-item"><i class="bi bi-telephone"></i> Direct Dial Phone</div>
-                            <div class="amenity-item"><i class="bi bi-brightness-high"></i> Blackout Curtains</div>
-                        </div>
-                        <div class="room-policy">
-                            <h5><i class="bi bi-info-circle"></i> Room Policies</h5>
-                            <ul>
-                                <li>Check-in: 3:00 PM | Check-out: 12:00 PM</li>
-                                <li>No smoking room</li>
-                                <li>Pet-friendly (additional fees apply)</li>
-                                <li>Free cancellation up to 24 hours before check-in</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <span class="modal-price">$120 <small>/night</small></span>
-                    <a href="reservations.html?room=standard" class="btn-book-modal">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Deluxe Suite Modal -->
-    <div class="modal fade" id="deluxeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content room-modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Deluxe Suite Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../images/room-deluxe.jpg" alt="Deluxe Suite" class="modal-room-image">
-                    <div class="modal-room-info">
-                        <h4>Amenities & Features</h4>
-                        <div class="amenities-grid">
-                            <div class="amenity-item"><i class="bi bi-tv"></i> 55" Smart TV (x2)</div>
-                            <div class="amenity-item"><i class="bi bi-wifi"></i> Premium WiFi</div>
-                            <div class="amenity-item"><i class="bi bi-wind"></i> Climate Control</div>
-                            <div class="amenity-item"><i class="bi bi-safe"></i> In-Room Safe</div>
-                            <div class="amenity-item"><i class="bi bi-droplet-fill"></i> Fully Stocked Mini Bar</div>
-                            <div class="amenity-item"><i class="bi bi-cup-hot-fill"></i> Espresso Machine</div>
-                            <div class="amenity-item"><i class="bi bi-umbrella"></i> Private Balcony</div>
-                            <div class="amenity-item"><i class="bi bi-water"></i> Ocean View</div>
-                            <div class="amenity-item"><i class="bi bi-lamp"></i> Separate Living Area</div>
-                            <div class="amenity-item"><i class="bi bi-droplet"></i> Rain Shower</div>
-                        </div>
-                        <div class="room-policy">
-                            <h5><i class="bi bi-info-circle"></i> Suite Policies</h5>
-                            <ul>
-                                <li>Check-in: 3:00 PM | Check-out: 12:00 PM</li>
-                                <li>Complimentary late check-out (subject to availability)</li>
-                                <li>Access to Executive Lounge</li>
-                                <li>Free cancellation up to 24 hours before check-in</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <span class="modal-price">$220 <small>/night</small></span>
-                    <a href="reservations.html?room=deluxe" class="btn-book-modal">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Presidential Suite Modal -->
-    <div class="modal fade" id="presidentialModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content room-modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Presidential Suite Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../images/room-presidential.jpg" alt="Presidential Suite" class="modal-room-image">
-                    <div class="modal-room-info">
-                        <h4>Amenities & Features</h4>
-                        <div class="amenities-grid">
-                            <div class="amenity-item"><i class="bi bi-tv"></i> 65" Smart TV (x3)</div>
-                            <div class="amenity-item"><i class="bi bi-wifi"></i> Ultra-Fast WiFi</div>
-                            <div class="amenity-item"><i class="bi bi-person-badge"></i> 24/7 Butler Service</div>
-                            <div class="amenity-item"><i class="bi bi-utensils"></i> Private Kitchen</div>
-                            <div class="amenity-item"><i class="bi bi-droplet"></i> Jacuzzi Tub</div>
-                            <div class="amenity-item"><i class="bi bi-umbrella"></i> Private Terrace</div>
-                            <div class="amenity-item"><i class="bi bi-water"></i> Panoramic View</div>
-                            <div class="amenity-item"><i class="bi bi-car-front"></i> Airport Transfer</div>
-                            <div class="amenity-item"><i class="bi bi-cup-hot-fill"></i> In-Room Dining</div>
-                            <div class="amenity-item"><i class="bi bi-spa"></i> Spa Access</div>
-                        </div>
-                        <div class="room-policy">
-                            <h5><i class="bi bi-info-circle"></i> Presidential Policies</h5>
-                            <ul>
-                                <li>Flexible check-in/check-out times</li>
-                                <li>Complimentary champagne upon arrival</li>
-                                <li>Priority restaurant reservations</li>
-                                <li>Free cancellation up to 24 hours before check-in</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <span class="modal-price">$450 <small>/night</small></span>
-                    <a href="reservations.html?room=presidential" class="btn-book-modal">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- FOOTER -->

@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="reservations-page">
     <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid d-flex align-items-center">
@@ -107,290 +107,117 @@
 
 
     <!-- ==================== MAIN CONTENT ==================== -->
-    <main class="form-section">
+    <main class="form-section simple-reservations">
         <div class="container">
-            <div class="form-layout">
+            <div class="simple-booking-wrapper">
+                <div class="simple-booking-card">
+                    <h2 class="simple-booking-title">Book Your Stay</h2>
 
-                <!-- ========== Reservation Form ========== -->
-                <div class="form-card">
-                    <div class="form-header">
-                        <div class="form-title-badge">
-                            <h2>Book Your Stay</h2>
-                        </div>
-                    </div>
-
-                    <form id="bookingForm">
-
-                        <!-- Full Name -->
+                    <form action="#" method="post" class="simple-booking-form">
                         <div class="form-group">
                             <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" class="form-input"
-                                placeholder="Enter your full name" required>
+                            <input type="text" id="fullName" name="fullName" class="form-input" required>
                         </div>
 
-                        <!-- Email Address -->
                         <div class="form-group">
                             <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input"
-                                placeholder="Enter your email address" required>
+                            <input type="email" id="email" name="email" class="form-input" required>
                         </div>
 
-                        <!-- Phone Number -->
                         <div class="form-group">
                             <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-input"
-                                placeholder="Enter your phone number" required>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
                         </div>
 
-                        <!-- Check-In / Check-Out Dates -->
-                        <div class="form-group">
-                            <div class="date-grid">
-                                <div>
-                                    <label for="checkIn" class="form-label">Check-In</label>
-                                    <input type="date" id="checkIn" name="checkIn" class="form-input" required>
-                                    <small class="error-message" id="checkInError"></small>
-                                </div>
-                                <div>
-                                    <label for="checkOut" class="form-label">Check-Out</label>
-                                    <input type="date" id="checkOut" name="checkOut" class="form-input" required>
-                                    <small class="error-message" id="checkOutError"></small>
-                                </div>
+                        <div class="date-grid">
+                            <div class="form-group">
+                                <label for="checkIn" class="form-label">Check-In</label>
+                                <input type="date" id="checkIn" name="checkIn" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkOut" class="form-label">Check-Out</label>
+                                <input type="date" id="checkOut" name="checkOut" class="form-input" required>
                             </div>
                         </div>
 
-                        <!-- Number of Guests -->
-                        <div class="form-group">
-                            <div class="date-grid">
-                                <div>
-                                    <label for="adults" class="form-label">Adults</label>
-                                    <select id="adults" name="adults" class="form-input">
-                                        <option value="1">1 Adult</option>
-                                        <option value="2" selected>2 Adults</option>
-                                        <option value="3">3 Adults</option>
-                                        <option value="4">4 Adults</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="children" class="form-label">Children</label>
-                                    <select id="children" name="children" class="form-input">
-                                        <option value="0" selected>0 Children</option>
-                                        <option value="1">1 Child</option>
-                                        <option value="2">2 Children</option>
-                                        <option value="3">3 Children</option>
-                                    </select>
-                                </div>
+                        <div class="date-grid">
+                            <div class="form-group">
+                                <label for="adults" class="form-label">Adults</label>
+                                <select id="adults" name="adults" class="form-input">
+                                    <option value="1">1 Adult</option>
+                                    <option value="2" selected>2 Adults</option>
+                                    <option value="3">3 Adults</option>
+                                    <option value="4">4 Adults</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="children" class="form-label">Children</label>
+                                <select id="children" name="children" class="form-input">
+                                    <option value="0" selected>0 Children</option>
+                                    <option value="1">1 Child</option>
+                                    <option value="2">2 Children</option>
+                                    <option value="3">3 Children</option>
+                                </select>
                             </div>
                         </div>
 
-                        <!-- Room Type Selection -->
                         <div class="form-group">
-                            <label class="form-label">Room Type</label>
-                            <div class="room-options">
-
-                                <label class="room-option" data-room="standard">
-                                    <input type="radio" name="roomType" value="standard" data-price="120" required>
-                                    <div class="room-type-name">Standard Room</div>
-                                    <div class="room-type-price">$120/night</div>
-                                    <div class="room-type-desc">Cozy room with city view</div>
-                                </label>
-
-                                <label class="room-option" data-room="deluxe">
-                                    <input type="radio" name="roomType" value="deluxe" data-price="220">
-                                    <div class="room-type-name">Deluxe Suite</div>
-                                    <div class="room-type-price">$220/night</div>
-                                    <div class="room-type-desc">Spacious with ocean view</div>
-                                </label>
-
-                                <label class="room-option" data-room="presidential">
-                                    <input type="radio" name="roomType" value="presidential" data-price="450">
-                                    <div class="room-type-name">Presidential Suite</div>
-                                    <div class="room-type-price">$450/night</div>
-                                    <div class="room-type-desc">Luxury with all amenities</div>
-                                </label>
-
-                            </div>
+                            <label for="roomType" class="form-label">Room Type</label>
+                            <select id="roomType" name="roomType" class="form-input" required>
+                                <option value="" selected disabled>Select room type</option>
+                                <option value="standard">Standard Room - $120/night</option>
+                                <option value="deluxe">Deluxe Suite - $220/night</option>
+                                <option value="presidential">Presidential Suite - $450/night</option>
+                            </select>
                         </div>
 
-                        <!-- Payment Method Section -->
-                        <div class="payment-section">
-                            <h3 class="payment-title">Select Payment Method</h3>
-
-                            <label class="payment-method active" id="cardMethod">
+                        <fieldset class="payment-basic">
+                            <legend class="form-label payment-label">Payment Method</legend>
+                            <label class="simple-check">
                                 <input type="radio" name="paymentMethod" value="card" checked>
-                                <span><i class="bi bi-credit-card"></i> Credit / Debit Card</span>
+                                Credit / Debit Card
                             </label>
-
-                            <label class="payment-method" id="paypalMethod">
+                            <label class="simple-check">
                                 <input type="radio" name="paymentMethod" value="paypal">
-                                <span><i class="bi bi-paypal"></i> PayPal</span>
+                                PayPal
                             </label>
+                        </fieldset>
 
-                            <!-- Credit Card Form -->
-                            <div id="cardForm" class="credit-card-form">
-                                <!-- Cardholder Name -->
-                                <div class="form-group">
-                                    <label for="cardName" class="form-label">Cardholder Name</label>
-                                    <input type="text" id="cardName" name="cardName" class="form-input"
-                                        placeholder="Name as it appears on card">
-                                </div>
-
-                                <!-- Billing Address -->
-                                <div class="form-group">
-                                    <label for="billingAddress" class="form-label">Billing Address</label>
-                                    <input type="text" id="billingAddress" name="billingAddress" class="form-input"
-                                        placeholder="Street address">
-                                </div>
-
-                                <div class="card-row">
-                                    <div class="form-group">
-                                        <label for="billingCity" class="form-label">City</label>
-                                        <input type="text" id="billingCity" name="billingCity" class="form-input"
-                                            placeholder="City">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="billingZip" class="form-label">ZIP Code</label>
-                                        <input type="text" id="billingZip" name="billingZip" class="form-input"
-                                            placeholder="ZIP">
-                                    </div>
-                                </div>
-
-                                <!-- Card Number -->
-                                <div class="form-group">
-                                    <label for="cardNumber" class="form-label">Card Number</label>
-                                    <div class="card-input-wrapper">
-                                        <input type="text" id="cardNumber" name="cardNumber" class="form-input"
-                                            placeholder="0000 0000 0000 0000" maxlength="19">
-                                        <i class="bi bi-credit-card card-icon"></i>
-                                    </div>
-                                </div>
-
-                                <!-- Expiry & CVV -->
-                                <div class="card-row">
-                                    <div class="form-group">
-                                        <label for="expiryDate" class="form-label">Expiry Date</label>
-                                        <input type="text" id="expiryDate" name="expiryDate" class="form-input"
-                                            placeholder="MM/YY" maxlength="5">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="cvv" class="form-label">CVV</label>
-                                        <div class="cvv-wrapper">
-                                            <input type="password" id="cvv" name="cvv" class="form-input"
-                                                placeholder="123" maxlength="3">
-                                            <i class="bi bi-question-circle cvv-help" title="3-digit code on back of card"></i>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="date-grid">
+                            <div class="form-group">
+                                <label for="cardNumber" class="form-label">Card Number</label>
+                                <input type="text" id="cardNumber" name="cardNumber" class="form-input" maxlength="19" placeholder="0000 0000 0000 0000">
                             </div>
-
-                            <!-- PayPal Form -->
-                            <div id="paypalForm" class="hidden">
-                                <div class="paypal-info">
-                                    <i class="bi bi-paypal paypal-logo"></i>
-                                    <p>Click the button below after you finish your PayPal payment.</p>
-                                    <button type="button" class="paypal-btn" id="completePaypalBtn">
-                                        <i class="bi bi-paypal"></i> I Already Paid via PayPal
-                                    </button>
-                                    <small id="paypalStatus" class="error-message"></small>
-                                </div>
+                            <div class="form-group">
+                                <label for="expiryDate" class="form-label">Expiry (MM/YY)</label>
+                                <input type="text" id="expiryDate" name="expiryDate" class="form-input" maxlength="5" placeholder="MM/YY">
                             </div>
                         </div>
 
-                        <!-- Terms Checkbox -->
-                        <div class="terms-group">
-                            <input type="checkbox" id="terms" name="terms" class="checkbox-input" required>
-                            <label for="terms" class="checkbox-label">
-                                I agree to the <a href="#" class="terms-link">Terms & Conditions</a> and 
-                                <a href="#" class="terms-link">Cancellation Policy</a>
-                            </label>
-                        </div>
+                        <label class="simple-check">
+                            <input type="checkbox" name="offers">
+                            I would like to receive exclusive offers and updates.
+                        </label>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="submit-btn">
-                            <i class="bi bi-check-circle"></i> Confirm Booking
-                        </button>
+                        <label class="simple-check">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            I agree to the Terms of Service and Privacy Policy.
+                        </label>
 
+                        <button type="submit" class="submit-btn simple-submit-btn">Submit Booking</button>
                     </form>
                 </div>
 
-
-                <!-- ========== Info Section (Sidebar) ========== -->
-                <div class="info-section">
-
-                    <!-- Booking Summary Card -->
-                    <div class="summary-card">
-                        <div class="summary-header">
-                            <h3><i class="bi bi-receipt"></i> Booking Summary</h3>
-                        </div>
-                        <div class="summary-body">
-                            <div class="summary-item">
-                                <span class="summary-label">Check-In Date</span>
-                                <span class="summary-value" id="summaryCheckIn">-</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Check-Out Date</span>
-                                <span class="summary-value" id="summaryCheckOut">-</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Nights</span>
-                                <span class="summary-value" id="summaryNights">0</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Guests</span>
-                                <span class="summary-value" id="summaryGuests">2 Adults, 0 Children</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Room Type</span>
-                                <span class="summary-value" id="summaryRoom">-</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Rate per Night</span>
-                                <span class="summary-value" id="summaryRate">$0</span>
-                            </div>
-                            <div class="summary-item">
-                                <span class="summary-label">Taxes & Fees (12%)</span>
-                                <span class="summary-value" id="summaryTax">$0</span>
-                            </div>
-                            <div class="summary-item total-row">
-                                <span class="summary-label">Total Amount</span>
-                                <span class="summary-value" id="summaryTotal">$0</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Reservation Policy Card -->
-                    <div class="policy-card">
-                        <h3><i class="bi bi-info-circle"></i> Reservation Policy</h3>
-                        <ul class="policy-list">
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Free cancellation up to 24 hours before check-in</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Check-in time starts at 3:00 PM</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Check-out time is 12:00 PM</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Valid ID required at check-in</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Quick Action Card -->
-                    <div class="quick-action-card">
-                        <h3><i class="bi bi-question-circle"></i> Need Help?</h3>
-                        <p>Our reservation team is available 24/7 to assist you with your booking.</p>
-                        <a href="contactus.html" class="contact-btn">
-                            <i class="bi bi-headset"></i> Contact Support
-                        </a>
-                    </div>
-
-                </div>
-
+                <aside class="simple-policy-card" aria-label="Reservation Policy">
+                    <h3>Reservation Policy</h3>
+                    <ul>
+                        <li>Free cancellation up to 24 hours before check-in.</li>
+                        <li>Check-in starts at 3:00 PM.</li>
+                        <li>Check-out is at 12:00 PM.</li>
+                        <li>Valid ID is required at check-in.</li>
+                    </ul>
+                    <a href="contactus.html" class="simple-help-link">Need help? Contact Support</a>
+                </aside>
             </div>
         </div>
     </main>
@@ -443,60 +270,9 @@
         </div>
     </div>
 
-
-    <!-- ==================== SUCCESS MODAL ==================== -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content success-modal-content">
-                <div class="modal-body text-center p-5">
-                    <div class="success-icon">
-                        <i class="bi bi-check-circle-fill"></i>
-                    </div>
-                    <h3 class="modal-title mb-3">Booking Confirmed!</h3>
-                    <p class="modal-message mb-4">
-                        Payment is successful. Thank you for choosing Aurelia Luxury Hotel. A confirmation email will be sent to your inbox.
-                    </p>
-                    <div class="booking-details mb-4" id="modalBookingDetails">
-                        <!-- Dynamic content -->
-                    </div>
-                    <button type="button" class="btn btn-primary modal-btn" data-bs-dismiss="modal">
-                        <i class="bi bi-house"></i> Return to Home
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ==================== ERROR MODAL ==================== -->
-    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content error-modal-content">
-                <div class="modal-body text-center p-5">
-                    <div class="error-icon">
-                        <i class="bi bi-exclamation-circle-fill"></i>
-                    </div>
-                    <h3 class="modal-title mb-3">Oops!</h3>
-                    <p class="modal-message mb-4" id="errorMessage">
-                        Please fill in all required fields.
-                    </p>
-                    <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">
-                        <i class="bi bi-arrow-left"></i> Go Back
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ==================== SCRIPTS ==================== -->
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
-    <!-- Reservations Page JS -->
-    <script src="reservations.js"></script>
 
 </body>
 
