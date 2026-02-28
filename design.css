@@ -72,8 +72,8 @@ main {
 .service-card {
     display: flex;
     align-items: center;
-    background: #F5E6C8;
-    padding: 15px;
+    background: #FEF1CF;
+    padding: 20px; 
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -82,12 +82,13 @@ main {
 
 
 .service-card img {
-    width: 140px;
-    height: 100px;
+    width: 180px; /* was 140px */
+    height: 130px; /* was 100px */
     object-fit: cover;
     border-radius: 10px;
     margin-right: 20px;
 }
+
 
 .card-content h5 {
     font-weight: 600;
@@ -283,35 +284,38 @@ main {
 }
 
 .services-heading {
-    font-size: clamp(2rem, 2.5vw, 2.3rem);
+    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
     font-weight: 300;
-    margin-left: -45px;
-    white-space: nowrap;
+    margin-left: 0;
+    white-space: normal;
 }
 
 @media (min-width: 992px) {
     .services-heading {
-        margin-left: -40px; /* nudge left on desktop only */
+        margin-left: -40px;
+        white-space: nowrap;
     }
 }
-
 .services-cards-col {
-    max-width: 550px;
+    max-width: 680px; 
 }
 
 .services-layout {
-    max-width: 900px;
+    max-width: 1040px;
     margin: 0 auto;
+    padding-left: 0;
 }
+
 
 .services-layout .story-title {
     left: -44px;
 }
 
 .services-layout .story-card {
-    padding: 30px 20px; /* reduce side padding for narrow column */
+    padding: 40px 25px; /* was 30px 20px */
+    font-size: 1.6rem; /* was default */
+    background-color: #FFFAEF;
 }
-
 /* Service Modals */
 .modal-content {
     border-radius: 15px;
