@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Main Design CSS -->
     <link rel="stylesheet" href="../design.css">
-    
-    
+
+
 </head>
 
 <body>
@@ -61,7 +62,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2 active" href="contactus.html" target="_self"><i class="bi bi-envelope-fill"></i> Contact Us</a>
+                    <a class="nav-link mx-lg-2 active" href="contactus.html" target="_self"><i
+                            class="bi bi-envelope-fill"></i> Contact Us</a>
                 </li>
             </ul>
 
@@ -83,9 +85,11 @@
                         <li class="nav-item"><a class="nav-link" href="home.html" target="_self">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html" target="_self">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="rooms.html" target="_self">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reservations.html" target="_self">Reservations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservations.html"
+                                target="_self">Reservations</a></li>
                         <li class="nav-item"><a class="nav-link" href="aboutus.html" target="_self">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="contactus.html" target="_self">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contactus.html" target="_self">Contact
+                                Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +104,8 @@
         <div class="container py-4 hero-content">
             <div class="col-12 col-md-8 col-xl-6">
                 <h2 class="display-4 text-start text-white fw-semibold mb-3 hero-title">Contact Us</h2>
-                <p class="text-white hero-subtitle">We're here to help. Reach out to us for any inquiries, reservations, or special requests.</p>
+                <p class="text-white hero-subtitle">We're here to help. Reach out to us for any inquiries, reservations,
+                    or special requests.</p>
             </div>
         </div>
     </section>
@@ -110,106 +115,75 @@
     <main class="contact-section">
         <div class="container">
             <div class="contact-layout">
-                
-                <!-- Contact Form Section -->
-                <div class="contact-form-card">
-                    <div class="form-header">
-                        <div class="form-title-badge">
-                            <i class="bi bi-envelope-fill"></i>
-                            <h2>Send Us a Message</h2>
-                        </div>
-                        <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                <div class="map-container">
+                    <div class="map-header">
+                        <h3><i class="bi bi-envelope-fill"></i> Send Us a Message</h3>
                     </div>
+                    <div class="map-wrapper">
+                        <div style="padding: 25px;">
+                        
 
-                    <form id="contactForm" action="#" method="POST">
-                        <!-- Name -->
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="form-input" 
-                                placeholder="Enter your name"
-                                required
-                            >
+                            <form id="contactForm" action="#" method="POST">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" id="name" name="name" class="form-input"
+                                        placeholder="Enter your name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="Enter your email address" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="Enter your phone number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" name="message" class="form-textarea"
+                                        placeholder="How can we help you?" required></textarea>
+                                </div>
+
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="offers" name="offers" class="checkbox-input">
+                                    <label for="offers" class="checkbox-label">I would like to receive exclusive offers
+                                        and updates from Aurelia Hotel.</label>
+                                </div>
+
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="consent" name="consent" class="checkbox-input" required>
+                                    <label for="consent" class="checkbox-label">
+                                        I consent to having this website store my submitted information. <a href="#"
+                                            class="privacy-link">Privacy Policy</a>
+                                    </label>
+                                </div>
+                            </form>
                         </div>
-
-                        <!-- Email Address -->
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                class="form-input" 
-                                placeholder="Enter your email address"
-                                required
-                            >
-                        </div>
-
-                        <!-- Phone Number -->
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                class="form-input" 
-                                placeholder="Enter your phone number"
-                            >
-                        </div>
-
-                        <!-- Message -->
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                class="form-textarea" 
-                                placeholder="How can we help you?"
-                                required
-                            ></textarea>
-                        </div>
-
-                        <!-- Checkboxes -->
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="offers" name="offers" class="checkbox-input">
-                            <label for="offers" class="checkbox-label">
-                                I would like to receive exclusive offers and updates from Aurelia Hotel.
-                            </label>
-                        </div>
-
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="consent" name="consent" class="checkbox-input" required>
-                            <label for="consent" class="checkbox-label">
-                                I consent to having this website store my submitted information. <a href="#" class="privacy-link">Privacy Policy</a>
-                            </label>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="submit-btn">
+                    </div>
+                    <div class="map-footer">
+                        <button type="submit" form="contactForm" class="directions-btn"
+                            style="background:none; border:none; cursor:pointer;">
                             <i class="bi bi-send-fill"></i> Send Message
                         </button>
-                    </form>
+                    </div>
                 </div>
-
                 <!-- Contact Info Section -->
                 <div class="contact-info-section">
-                    
+
                     <!-- Map Container with Interactive Map -->
                     <div class="map-container">
                         <div class="map-header">
                             <h3><i class="bi bi-geo-alt-fill"></i> Find Us</h3>
                         </div>
                         <div class="map-wrapper">
-                            <iframe 
+                            <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.802548850039!2d121.0186!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMzJzE3LjAiTiAxMjHCsDAxJzA3LjAiRQ!5e0!3m2!1sen!2sph!4v1609459200000!5m2!1sen!2sph"
-                                width="100%" 
-                                height="300" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                             <div class="map-overlay">
@@ -220,7 +194,8 @@
                             </div>
                         </div>
                         <div class="map-footer">
-                            <a href="https://maps.google.com/?q=14.5547,121.0186" target="_blank" class="directions-btn">
+                            <a href="https://maps.google.com/?q=14.5547,121.0186" target="_blank"
+                                class="directions-btn">
                                 <i class="bi bi-signpost-split"></i> Get Directions
                             </a>
                         </div>
@@ -258,7 +233,8 @@
                                 </div>
                                 <div class="detail-content">
                                     <span class="detail-label">Address</span>
-                                    <span class="detail-value">123 Luxury Avenue, Makati City, Metro Manila, Philippines</span>
+                                    <span class="detail-value">123 Luxury Avenue, Makati City, Metro Manila,
+                                        Philippines</span>
                                 </div>
                             </div>
 
@@ -272,34 +248,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Social Media Card -->
-                    <div class="social-media-card">
-                        <h3><i class="bi bi-share-fill"></i> Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon" title="Facebook">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="Instagram">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="Twitter">
-                                <i class="bi bi-twitter-x"></i>
-                            </a>
-                            <a href="#" class="social-icon" title="LinkedIn">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Quick Actions Card -->
-                    <div class="quick-action-card">
-                        <h3><i class="bi bi-headset"></i> Need Immediate Assistance?</h3>
-                        <p>Our reservation team is available 24/7 to help you with your booking and inquiries.</p>
-                        <a href="reservations.html" class="book-now-btn" target="_self">
-                            <i class="bi bi-calendar-check"></i> Book a Room
-                        </a>
                     </div>
 
                 </div>
@@ -364,11 +312,11 @@
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Show success modal
             const successModal = new bootstrap.Modal(document.getElementById('contactSuccessModal'));
             successModal.show();
-            
+
             // Reset form
             this.reset();
         });
