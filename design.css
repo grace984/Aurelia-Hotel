@@ -122,23 +122,24 @@ main {
 .service-card {
     display: flex;
     align-items: center;
-    background: #FEF1CF;
+    background: #faefd1;
     padding: 20px; 
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: 0.4s;
+    
 }
 
 
 .service-card img {
-    width: 180px; /* was 140px */
-    height: 130px; /* was 100px */
+    width: 220px;       /* fixed width */
+    height: 135px;
+    min-width: 220px;   /* prevents shrinking */
     object-fit: cover;
     border-radius: 10px;
     margin-right: 20px;
 }
-
 
 .card-content h5 {
     font-weight: 600;
@@ -494,7 +495,7 @@ main {
     /* stacking context for z-index */
     z-index: 0;
     /* sits below the title */
-    background-color: #fdf9ec;
+    background-color: #fffdf2;
     border: 1px solid #e8dfc0;
     border-radius: 10px;
     padding: 30px 70px 30px;
