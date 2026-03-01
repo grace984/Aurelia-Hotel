@@ -1514,7 +1514,7 @@ body {
 
 .contact-section {
     padding: 60px 0;
-    background-color: #f8f9fa;
+    background-color: #f3f3f5;
 }
 
 .contact-layout {
@@ -1526,9 +1526,10 @@ body {
 }
 
 .contact-section .contact-form-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #f2ece0;
+    border: 1px solid #dbc88f;
+    border-radius: 10px;
+    box-shadow: none;
     padding: 40px;
 }
 
@@ -1538,8 +1539,8 @@ body {
 
 .contact-section .form-title-badge {
     display: inline-block;
-    background: #d4a574;
-    color: #fff;
+    background: #e8d196;
+    color: #2d2d2d;
     padding: 10px 25px;
     border-radius: 6px;
 }
@@ -1556,8 +1557,8 @@ body {
 
 .contact-section .form-label {
     display: block;
-    font-weight: 500;
-    color: #333;
+    font-weight: 700;
+    color: #3a3a3a;
     margin-bottom: 8px;
     font-size: 0.9rem;
 }
@@ -1566,18 +1567,23 @@ body {
 .contact-section .form-textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #e0d5c7;
+    border: 2px solid #e0c271;
     border-radius: 8px;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    background: #faf8f5;
+    background: #fff;
 }
 
 .contact-section .form-input:focus,
 .contact-section .form-textarea:focus {
     outline: none;
-    border-color: #d4a574;
-    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+    border-color: #c9a24d;
+    box-shadow: none;
+}
+
+.contact-section .form-input::placeholder,
+.contact-section .form-textarea::placeholder {
+    color: #9b9278;
 }
 
 .contact-section .form-textarea {
@@ -1596,13 +1602,13 @@ body {
     width: 18px;
     height: 18px;
     margin-top: 2px;
-    accent-color: #d4a574;
+    accent-color: #c9a24d;
     cursor: pointer;
 }
 
 .contact-section .checkbox-label {
     font-size: 0.9rem;
-    color: #555;
+    color: #3f3f3f;
     cursor: pointer;
     line-height: 1.5;
 }
@@ -1610,7 +1616,7 @@ body {
 .contact-section .submit-btn {
     width: 100%;
     padding: 16px;
-    background: #c9a86c;
+    background: #e8c35d;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -1622,9 +1628,9 @@ body {
 }
 
 .contact-section .submit-btn:hover {
-    background: #b8975a;
+    background: #d6b04e;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(201, 168, 108, 0.4);
+    box-shadow: none;
 }
 
 .contact-section .form-subtitle {
@@ -1634,7 +1640,7 @@ body {
 }
 
 .contact-section .privacy-link {
-    color: #8b6914;
+    color: #8a6b20;
     text-decoration: none;
 }
 
@@ -1652,9 +1658,10 @@ body {
 .contact-section .map-container,
 .contact-section .contact-details-card,
 .contact-section .social-media-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #f2ece0;
+    border: 1px solid #dbc88f;
+    border-radius: 10px;
+    box-shadow: none;
 }
 
 .contact-section .map-container,
@@ -1669,8 +1676,8 @@ body {
 
 .contact-section .map-header,
 .contact-section .contact-details-header {
-    background: #d4a574;
-    color: #fff;
+    background: #e8d196;
+    color: #2d2d2d;
     padding: 15px 20px;
 }
 
@@ -1705,15 +1712,15 @@ body {
 
 .contact-section .map-footer {
     padding: 15px 20px;
-    border-top: 1px solid #eee;
-    background: #fff;
+    border-top: 1px solid #dbc88f;
+    background: #f2ece0;
 }
 
 .contact-section .directions-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #2c3e50;
+    color: #8a6b20;
     text-decoration: none;
     font-weight: 600;
 }
@@ -1737,8 +1744,8 @@ body {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: #f6ede2;
-    color: #c9a86c;
+    background: #f9f2e2;
+    color: #c9a24d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1769,7 +1776,7 @@ body {
 .contact-section .social-media-card h3 {
     margin: 0 0 15px;
     font-size: 1.1rem;
-    color: #333;
+    color: #2d2d2d;
 }
 
 .contact-section .social-icons {
@@ -1784,35 +1791,35 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #f6ede2;
-    color: #8b6914;
+    background: #f9f2e2;
+    color: #8a6b20;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .contact-section .social-icon:hover {
-    background: #d4a574;
+    background: #e8c35d;
     color: #fff;
     transform: translateY(-2px);
 }
 
 .contact-section .quick-action-card {
-    background: linear-gradient(135deg, #f5e6d3 0%, #fdf6ed 100%);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #f2ece0;
+    border-radius: 10px;
+    box-shadow: none;
     padding: 25px;
-    border: 1px solid #e8d5c0;
+    border: 1px solid #dbc88f;
 }
 
 .contact-section .quick-action-card h3 {
-    color: #8b6914;
+    color: #2d2d2d;
     margin-bottom: 12px;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .contact-section .quick-action-card p {
-    color: #666;
+    color: #505050;
     margin-bottom: 20px;
     font-size: 0.9rem;
     line-height: 1.6;
@@ -1822,7 +1829,7 @@ body {
     display: block;
     width: 100%;
     padding: 14px;
-    background: #2c3e50;
+    background: #e8c35d;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -1835,17 +1842,17 @@ body {
 }
 
 .contact-section .book-now-btn:hover {
-    background: #1a252f;
+    background: #d6b04e;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+    box-shadow: none;
 }
 
 /* Contact hero image only (height is controlled by shared .hero-section rules) */
 .contactus-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(to right, rgba(1, 18, 39, 0.7), rgba(0, 35, 77, 0.3)), url('./images/contactushero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./images/contactushero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
