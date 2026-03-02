@@ -14,7 +14,7 @@
 }
 
 .navbar .container-fluid {
-    min-height:56px;
+    min-height: 56px;
 }
 
 .navbar-brand img {
@@ -44,7 +44,7 @@
 }
 
 /* Force one consistent desktop footer layout on all pages */
-.footer-section footer > .col:empty {
+.footer-section footer>.col:empty {
     display: none;
 }
 
@@ -54,7 +54,7 @@
         padding-bottom: 3rem !important;
     }
 
-    .footer-section footer > [class*="col"] {
+    .footer-section footer>[class*="col"] {
         flex: 0 0 auto;
         width: 25% !important;
     }
@@ -123,19 +123,21 @@ main {
     display: flex;
     align-items: center;
     background: #faefd1;
-    padding: 20px; 
+    padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: 0.4s;
-    
+
 }
 
 
 .service-card img {
-    width: 220px;       /* fixed width */
+    width: 220px;
+    /* fixed width */
     height: 135px;
-    min-width: 220px;   /* prevents shrinking */
+    min-width: 220px;
+    /* prevents shrinking */
     object-fit: cover;
     border-radius: 10px;
     margin-right: 20px;
@@ -347,8 +349,9 @@ main {
         white-space: nowrap;
     }
 }
+
 .services-cards-col {
-    max-width: 680px; 
+    max-width: 680px;
 }
 
 .services-layout {
@@ -363,10 +366,13 @@ main {
 }
 
 .services-layout .story-card {
-    padding: 40px 25px; /* was 30px 20px */
-    font-size: 1.6rem; /* was default */
+    padding: 40px 25px;
+    /* was 30px 20px */
+    font-size: 1.6rem;
+    /* was default */
     background-color: #FFFAEF;
 }
+
 /* Service Modals */
 .modal-content {
     border-radius: 15px;
@@ -537,7 +543,8 @@ main {
     overflow-wrap: break-word;
     white-space: normal;
     width: 100%;
-    margin: 30px 0 10px 0; /* more top, less bottom */
+    margin: 30px 0 10px 0;
+    /* more top, less bottom */
 }
 
 /* home cards */
@@ -545,7 +552,8 @@ main {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    height: 400px; /* default for large screens */
+    height: 400px;
+    /* default for large screens */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -665,9 +673,11 @@ main {
     font-size: 19px;
     border-radius: 20px;
     color: #737070;
-    list-style: none; /* removes default triangle */
+    list-style: none;
+    /* removes default triangle */
     display: flex;
-    flex-direction: row-reverse; /* pushes arrow to the right */
+    flex-direction: row-reverse;
+    /* pushes arrow to the right */
     justify-content: space-between;
 }
 
@@ -687,12 +697,14 @@ main {
 /* remove default browser marker */
 .collapsible summary::-webkit-details-marker {
     display: none;
-    color: #737070; /* grey when closed */
+    color: #737070;
+    /* grey when closed */
 }
 
 .collapsible[open] summary {
     background-color: #fbf0bfcb;
-    color: #000000; /* black when open */
+    color: #000000;
+    /* black when open */
 }
 
 .collapsible p {
@@ -704,7 +716,8 @@ main {
 }
 
 .collapsible[open] p {
-    color: #000000; /* black when open */
+    color: #000000;
+    /* black when open */
 }
 
 /* ==================== RESERVATIONS PAGE ==================== */
@@ -726,7 +739,7 @@ body {
     position: absolute;
     inset: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('./images/reservationhero.jpg') center/cover no-repeat;
+        url('./images/reservationhero.jpg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -745,397 +758,17 @@ body {
     max-width: 500px;
 }
 
-.form-section {
-    padding: 32px 0 38px;
-}
-
-.form-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 24px;
-    align-items: start;
-}
-
-.form-card,
-.summary-card,
-.policy-card,
-.quick-action-card {
-    background-color: #fff;
-    border: 1px solid #fff7e6;
-    border-radius: 8px;
-}
-
-.form-card {
-    padding: 22px;
-}
-
-.form-title-badge {
-    display: inline-block;
-    background-color: #e8d196;
-    padding: 4px 12px;
-    margin-bottom: 14px;
-}
-
-.form-title-badge h2 {
-    margin: 0;
-    font-size: 1.75rem;
-    color: #1f2530;
-}
-
-.form-group {
-    margin-bottom: 14px;
-}
-
-.form-label {
-    margin-bottom: 6px;
-    color: #2e3542;
-    font-weight: 600;
-}
-
-.form-input {
+.form-input,
+.form-textarea {
+    box-sizing: border-box;
     width: 100%;
-    border: 1px solid #cdbf99;
-    border-radius: 4px;
-    padding: 9px 10px;
-    font-size: 0.95rem;
-    color: #1f2530;
-    background-color: #fff;
+    max-width: 100%;
 }
 
-.form-input:focus {
-    outline: none;
-    border-color: #b7933f;
-    box-shadow: 0 0 0 2px rgba(183, 147, 63, 0.2);
+.contact-info-section {
+    align-self: start;
 }
 
-.error-message {
-    display: block;
-    color: #b14545;
-    min-height: 16px;
-    font-size: 0.8rem;
-}
-
-.date-grid,
-.card-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-}
-
-.room-options {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-}
-
-.room-option {
-    border: 1px solid #d8cfb7;
-    border-radius: 6px;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #fff;
-}
-
-.room-option:hover {
-    border-color: #b7933f;
-}
-
-.room-option input {
-    margin-right: 6px;
-}
-
-.room-option.active {
-    border-color: #b7933f;
-    background-color: #faf6eb;
-}
-
-.room-type-name {
-    font-weight: 700;
-    color: #242b37;
-}
-
-.room-type-price {
-    color: #8b6f2a;
-    font-weight: 600;
-}
-
-.room-type-desc {
-    color: #586073;
-    font-size: 0.88rem;
-}
-
-.payment-section {
-    border-top: 1px solid #e3ddcf;
-    padding-top: 14px;
-    margin-top: 8px;
-}
-
-.payment-title {
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-}
-
-.payment-method {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 10px;
-    border: 1px solid #d8cfb7;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-right: 8px;
-    margin-bottom: 10px;
-}
-
-.payment-method.active {
-    border-color: #b7933f;
-    background-color: #faf6eb;
-}
-
-.card-input-wrapper,
-.cvv-wrapper {
-    position: relative;
-}
-
-.card-icon,
-.cvv-help {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #596275;
-}
-
-.hidden {
-    display: none;
-}
-
-.paypal-info {
-    border: 1px dashed #cfbf98;
-    border-radius: 6px;
-    padding: 12px;
-    background-color: #fcf8ee;
-}
-
-.paypal-logo {
-    font-size: 1.8rem;
-    color: #0070ba;
-}
-
-.paypal-btn,
-.contact-btn,
-.submit-btn,
-.modal-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    border: none;
-}
-
-.paypal-btn,
-.contact-btn {
-    background-color: #e8d196;
-    color: #2f260f;
-    padding: 8px 12px;
-}
-
-.paypal-btn:hover,
-.contact-btn:hover {
-    background-color: #dcbf72;
-    color: #2f260f;
-}
-
-.terms-group {
-    display: flex;
-    gap: 8px;
-    margin: 12px 0 16px;
-}
-
-.checkbox-input {
-    margin-top: 4px;
-}
-
-.checkbox-label {
-    color: #485062;
-    margin-bottom: 0;
-}
-
-.terms-link {
-    color: #7c6328;
-    text-decoration: underline;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #b7933f;
-    color: #fff;
-    font-size: 1.05rem;
-}
-
-.submit-btn:hover {
-    background-color: #9e7e35;
-}
-
-.info-section {
-    display: grid;
-    gap: 14px;
-}
-
-.summary-header {
-    padding: 12px 14px;
-    border-bottom: 1px solid #e2dbc9;
-}
-
-.summary-header h3 {
-    margin: 0;
-    font-size: 1.28rem;
-}
-
-.summary-body {
-    padding: 10px 14px 14px;
-}
-
-.summary-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    border-bottom: 1px solid #eee7d8;
-    padding: 8px 0;
-}
-
-.summary-item:last-child {
-    border-bottom: none;
-}
-
-.summary-label {
-    color: #4f5665;
-}
-
-.summary-value {
-    color: #1d2430;
-    font-weight: 600;
-    text-align: right;
-}
-
-.total-row {
-    margin-top: 4px;
-}
-
-.total-row .summary-label,
-.total-row .summary-value {
-    font-size: 1.06rem;
-    font-weight: 700;
-}
-
-.policy-card,
-.quick-action-card {
-    padding: 14px;
-}
-
-.policy-card h3,
-.quick-action-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.policy-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.policy-list li {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 8px;
-    color: #495061;
-}
-
-.policy-list i {
-    color: #2f8e3d;
-}
-
-.quick-action-card p {
-    color: #495061;
-}
-
-.success-modal-content,
-.error-modal-content {
-    border-radius: 8px;
-}
-
-.success-icon i {
-    font-size: 2.8rem;
-    color: #2f8e3d;
-}
-
-.error-icon i {
-    font-size: 2.8rem;
-    color: #b14545;
-}
-
-.booking-details {
-    background-color: #f7f3e8;
-    border: 1px solid #e4dcc8;
-    padding: 10px;
-    text-align: left;
-}
-
-.modal-btn.btn-primary {
-    background-color: #b7933f;
-    border-color: #b7933f;
-}
-
-.modal-btn.btn-primary:hover {
-    background-color: #9e7e35;
-    border-color: #9e7e35;
-}
-
-@media (max-width: 1100px) {
-    .form-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .info-section {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        align-items: start;
-    }
-}
-
-@media (max-width: 850px) {
-    .room-options {
-        grid-template-columns: 1fr;
-    }
-
-    .info-section {
-        grid-template-columns: 1fr;
-    }
-
-    .date-grid,
-    .card-row {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 575px) {
-    .form-card {
-        padding: 14px;
-    }
-
-    .form-title-badge h2 {
-        font-size: 1.5rem;
-    }
-
-    .payment-method {
-        width: 100%;
-        margin-right: 0;
-    }
-}
 
 /* ==================== ROOMS PAGE ==================== */
 
@@ -1144,7 +777,7 @@ body {
 }
 
 .hero-section {
-    margin-top:56px;
+    margin-top: 56px;
     position: relative;
     min-height: 500px;
     display: flex;
@@ -1156,7 +789,7 @@ body {
     position: absolute;
     inset: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)),
-    url('./images/roomshero.jpg') center/cover no-repeat;
+        url('./images/roomshero.jpg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -1498,6 +1131,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .bsb-hero-6,
     .hero-section {
         min-height: 350px !important;
@@ -1879,6 +1513,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .contact-section .contact-form-card,
     .contact-section .quick-action-card {
         padding: 25px;
