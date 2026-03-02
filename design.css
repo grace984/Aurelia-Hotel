@@ -1309,6 +1309,27 @@ body {
     gap: 10px;
 }
 
+.rooms-page-simple .story-card {
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+}
+
+.rooms-page-simple .story-card p {
+    margin-left: 1px;
+    text-indent: 0;
+    text-align: left;
+    margin-top: 35px;
+}
+
+.rooms-page-simple .story-wrapper {
+    padding-top: 20px;
+}
+
+.rooms-page-simple .rooms-showcase-section .room-card:first-child {
+    margin-top: -30px;
+}
+
 .btn-book-now,
 .btn-view-details,
 .btn-table-book,
