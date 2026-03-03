@@ -660,6 +660,22 @@ main {
 /* ==================== END HOME PAGE ==================== */
 
 /* ==================== FAQ PAGE ==================== */
+
+#policytables .comparison-table {
+    margin-bottom: 0;
+}
+
+#policytables .comparison-table td:first-child {
+    font-weight: 700;
+    background-color: #f2ce81c9;
+    color: #131313;
+}
+
+#policytables .comparison-table th,
+#policytables .comparison-table td {
+    border-color: #a78a36;
+}
+
 .collapsible {
     border: 2px solid #f5cb5c;
     border-radius: 20px;
