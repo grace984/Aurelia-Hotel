@@ -447,7 +447,9 @@ main {
 .gallery-card img {
     transition: 0.5s;
     height: 250px;
+    width: 100%;        
     object-fit: cover;
+    display: block;    
 }
 
 .gallery-card:hover img {
