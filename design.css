@@ -1166,6 +1166,11 @@ body {
     }
 }
 
+.rooms-page-simple .comparison-table thead tr th {
+    background-color: #f2ce81c9;
+    color: #131313;
+}
+
 /* ==================== CONTACT PAGE ==================== */
 /* Scoped under .contact-section to avoid overriding other pages */
 
