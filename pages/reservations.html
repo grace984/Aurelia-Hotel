@@ -166,9 +166,8 @@
                                     <label for="roomType" class="form-label">Room Type</label>
                                     <select id="roomType" name="roomType" class="form-input" required>
                                         <option value="" selected disabled>Select room type</option>
-                                        <option value="standard">Standard Room - $120/night</option>
-                                        <option value="deluxe">Deluxe Suite - $220/night</option>
-                                        <option value="presidential">Presidential Suite - $450/night</option>
+                                        <option value="standard-city">City View Room - $120/night</option>
+                                        <option value="standard-family">Family Room - $150/night</option>
                                     </select>
                                 </div>
 
@@ -297,6 +296,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var roomTypeSelect = document.getElementById("roomType");
+            var params = new URLSearchParams(window.location.search);
+            var selectedRoom = params.get("room");
+
+            if (!roomTypeSelect || !selectedRoom) {
+                return;
+            }
+
+            var matchingOption = roomTypeSelect.querySelector('option[value="' + selectedRoom + '"]');
+            if (matchingOption) {
+                roomTypeSelect.value = selectedRoom;
+            }
+        });
+    </script>
 
 </body>
 
