@@ -661,6 +661,11 @@ main {
 
 /* ==================== FAQ PAGE ==================== */
 
+.col-md-3.mb-4 {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
 #policytables .comparison-table {
     margin-bottom: 0;
 }
