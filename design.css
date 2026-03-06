@@ -538,9 +538,6 @@ main {
     }
 }
 
-.story-card p {
-    text-indent: 40px;
-}
 
 @media (max-width: 576px) {
     .story-card {
@@ -550,17 +547,19 @@ main {
     .story-card p {
         font-size: 1rem;
         text-align: left !important;
-        /* removed text-indent: 0 !important */
     }
 
+    #ourstory .story-card p,
     #luxuryexperience .story-card p {
         text-align: justify !important;
+        text-indent: 40px;
     }
 
     .story-card ul {
         font-size: 1rem;
     }
 }
+
 /* ==================== SERVICES PAGE MOBILE ==================== */
 
 @media (max-width: 991px) {
