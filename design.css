@@ -538,6 +538,29 @@ main {
     }
 }
 
+.story-card p {
+    text-indent: 40px;
+}
+
+@media (max-width: 576px) {
+    .story-card {
+        font-size: 1rem;
+    }
+
+    .story-card p {
+        font-size: 1rem;
+        text-align: left !important;
+        /* removed text-indent: 0 !important */
+    }
+
+    #luxuryexperience .story-card p {
+        text-align: justify !important;
+    }
+
+    .story-card ul {
+        font-size: 1rem;
+    }
+}
 /* ==================== SERVICES PAGE MOBILE ==================== */
 
 @media (max-width: 991px) {
