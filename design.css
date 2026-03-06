@@ -538,6 +538,63 @@ main {
     }
 }
 
+/* ==================== SERVICES PAGE MOBILE ==================== */
+
+@media (max-width: 991px) {
+    /* Stack the left/right columns vertically */
+    .services-layout .row {
+        flex-direction: column;
+    }
+
+    .services-heading {
+        margin-left: 0;
+        font-size: 1.6rem;
+        white-space: normal;
+    }
+
+    .services-layout .story-title {
+        left: 0;
+    }
+
+    .services-cards-col {
+        max-width: 100%;
+    }
+
+    /* Stack service card image above text */
+    .service-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-card img {
+        width: 100%;
+        min-width: unset;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-card img {
+        height: 170px;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .card-content h4,
+    .card-content h5 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+    }
+}
+
 /* ==================== HOME PAGE ==================== */
 /* home inclusions */
 .story-paragraph {
