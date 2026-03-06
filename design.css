@@ -529,6 +529,7 @@ main {
 
     .story-card {
         padding: 20px 15px;
+        text-align: left; 
     }
 
     .section-img {
