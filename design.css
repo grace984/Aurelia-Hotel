@@ -690,8 +690,8 @@ main {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%; /* was 50% — increase this to cover more of the card */
-    background: linear-gradient(to top, rgba(7, 1, 40, 0.742), transparent);  /* was 0.7 — raise this for darker overlay */
+    height: 75%; /* was 50% — increase this to cover more of the card */
+    background: linear-gradient(to top, rgba(6, 0, 41, 0.742), transparent);  /* was 0.7 — raise this for darker overlay */
     border-radius: 0 0 12px 12px;
 }
 
