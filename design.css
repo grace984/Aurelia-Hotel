@@ -1,4 +1,4 @@
-/* ==================== NAVIGATION ==================== */
+/* NAVIGATION */
 .nav-left {
     flex: 1;
 }
@@ -22,7 +22,6 @@
     width: auto;
 }
 
-/* Keep navbar text size stable across active/inactive pages */
 .navbar .nav-link,
 .navbar .nav-link.active {
     font-weight: 600;
@@ -30,7 +29,7 @@
     font-size: 1rem;
 }
 
-/* ==================== FOOTER ==================== */
+/* FOOTER */
 .footer-section {
     background: linear-gradient(to right, #f3d37b 38%, #e4bd64 88%);
     margin-bottom: 0 !important;
@@ -43,7 +42,6 @@
     margin-bottom: 0 !important;
 }
 
-/* Force one consistent desktop footer layout on all pages */
 .footer-section footer>.col:empty {
     display: none;
 }
@@ -69,8 +67,7 @@
     align-items: center !important;
 }
 
-/* ==================== GENERAL BODY AND LAYOUT ==================== */
-/* Ensure footer sticks to bottom */
+/* GENERAL BODY AND LAYOUT */
 body {
     min-height: 100vh;
     display: flex;
@@ -82,13 +79,12 @@ main {
     flex: 1;
 }
 
-/* ==================== TYPOGRAPHY ==================== */
+/* TYPOGRAPHY */
 .section-title {
     font-weight: 700;
     font-size: 36px;
 }
 
-/* LEFT MENU */
 .services-menu {
     background: #F5E6C8;
     padding: 25px;
@@ -117,8 +113,6 @@ main {
 }
 
 
-
-/* SERVICE CARDS */
 .service-card {
     display: flex;
     align-items: center;
@@ -134,10 +128,8 @@ main {
 
 .service-card img {
     width: 220px;
-    /* fixed width */
     height: 135px;
     min-width: 220px;
-    /* prevents shrinking */
     object-fit: cover;
     border-radius: 10px;
     margin-right: 20px;
@@ -153,9 +145,7 @@ main {
 }
 
 
-
-/* ==================== SERVICES PAGE STYLES ==================== */
-/* Services Intro Section */
+/* SERVICES PAGE STYLES */
 .services-intro-section {
     padding: 80px 0 50px;
     background-color: #f8f9fa;
@@ -166,7 +156,6 @@ main {
     background-color: #f8f9fa;
 }
 
-/* Service Cards */
 .service-card-large {
     background: #fff;
     border-radius: 15px;
@@ -367,13 +356,10 @@ main {
 
 .services-layout .story-card {
     padding: 40px 25px;
-    /* was 30px 20px */
     font-size: 1.6rem;
-    /* was default */
     background-color: #FFFAEF;
 }
 
-/* Service Modals */
 .modal-content {
     border-radius: 15px;
     border: none;
@@ -402,7 +388,6 @@ main {
     color: #555;
 }
 
-/* GALLERY HERO */
 .gallery-hero {
     background: linear-gradient(to right, rgba(1, 18, 39, 0.8), rgba(1, 18, 39, 0.3)),
         url('./images/banner.png');
@@ -423,7 +408,6 @@ main {
     opacity: 0.9;
 }
 
-/* Carousel */
 .carousel-inner img {
     height: 450px;
     object-fit: cover;
@@ -435,7 +419,6 @@ main {
     border-radius: 10px;
 }
 
-/* IMAGE GRID */
 .gallery-card {
     position: relative;
     overflow: hidden;
@@ -447,16 +430,15 @@ main {
 .gallery-card img {
     transition: 0.5s;
     height: 250px;
-    width: 100%;        
+    width: 100%;
     object-fit: cover;
-    display: block;    
+    display: block;
 }
 
 .gallery-card:hover img {
     transform: scale(1.1);
 }
 
-/* GOLD OVERLAY */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -473,12 +455,9 @@ main {
     transform: translateY(0);
 }
 
-
-/* Container template */
 .story-wrapper {
     position: relative;
     padding-top: 35px;
-    /* increase this until the text clears the title */
 }
 
 
@@ -486,7 +465,6 @@ main {
     position: absolute;
     top: 0;
     left: -40px;
-    /* hangs out to the left of the card */
     z-index: 1;
     background-color: #f4d581;
     font-weight: 700;
@@ -500,9 +478,7 @@ main {
 
 .story-card {
     position: relative;
-    /* stacking context for z-index */
     z-index: 0;
-    /* sits below the title */
     background-color: #fffdf2;
     border: 1px solid #e8dfc0;
     border-radius: 10px;
@@ -510,9 +486,6 @@ main {
     font-size: 1.45rem;
 }
 
-
-
-/* about us photos */
 .section-img {
     width: 310px !important;
     height: 230px !important;
@@ -520,7 +493,6 @@ main {
     max-width: 100%;
 }
 
-/* FOR SMALLER SCREENS CONTAINER */
 @media (max-width: 576px) {
     .story-title {
         left: 0;
@@ -529,7 +501,7 @@ main {
 
     .story-card {
         padding: 20px 15px;
-        text-align: left; 
+        text-align: left;
     }
 
     .section-img {
@@ -537,7 +509,6 @@ main {
         height: 200px;
     }
 }
-
 
 @media (max-width: 576px) {
     .story-card {
@@ -560,10 +531,9 @@ main {
     }
 }
 
-/* ==================== SERVICES PAGE MOBILE ==================== */
+/* SERVICES PAGE MOBILE */
 
 @media (max-width: 991px) {
-    /* Stack the left/right columns vertically */
     .services-layout .row {
         flex-direction: column;
     }
@@ -582,7 +552,6 @@ main {
         max-width: 100%;
     }
 
-    /* Stack service card image above text */
     .service-card {
         flex-direction: column;
         align-items: flex-start;
@@ -617,8 +586,7 @@ main {
     }
 }
 
-/* ==================== HOME PAGE ==================== */
-/* home inclusions */
+/* HOME PAGE */
 .story-paragraph {
     font-size: clamp(1.1rem, 4vw, 1.78rem);
     word-wrap: break-word;
@@ -626,16 +594,13 @@ main {
     white-space: normal;
     width: 100%;
     margin: 30px 0 10px 0;
-    /* more top, less bottom */
 }
 
-/* home cards */
 .feature-card {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     height: 400px;
-    /* default for large screens */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -663,7 +628,6 @@ main {
     left: 15px;
     color: white;
     z-index: 1;
-    /* add this so text sits above the gradient */
 }
 
 .feature-caption h5 {
@@ -681,7 +645,6 @@ main {
 .feature-caption.gold h5,
 .feature-caption.gold p {
     color: #f4d581;
-    /* your existing gold color */
 }
 
 .feature-card::after {
@@ -690,8 +653,8 @@ main {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 75%; /* was 50% — increase this to cover more of the card */
-    background: linear-gradient(to top, rgba(6, 0, 41, 0.742), transparent);  /* was 0.7 — raise this for darker overlay */
+    height: 75%;
+    background: linear-gradient(to top, rgba(6, 0, 41, 0.742), transparent);
     border-radius: 0 0 12px 12px;
 }
 
@@ -700,7 +663,6 @@ main {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 
 .rooms .btn {
     background-color: #f4d581;
@@ -737,9 +699,7 @@ main {
     font-weight: 600;
 }
 
-/* ==================== END HOME PAGE ==================== */
-
-/* ==================== FAQ PAGE ==================== */
+/* FAQ PAGE */
 
 .col-md-3.mb-4 {
     margin-top: 30px;
@@ -777,10 +737,8 @@ main {
     border-radius: 20px;
     color: #737070;
     list-style: none;
-    /* removes default triangle */
     display: flex;
     flex-direction: row-reverse;
-    /* pushes arrow to the right */
     justify-content: space-between;
 }
 
@@ -797,17 +755,14 @@ main {
     color: #000000;
 }
 
-/* remove default browser marker */
 .collapsible summary::-webkit-details-marker {
     display: none;
     color: #737070;
-    /* grey when closed */
 }
 
 .collapsible[open] summary {
     background-color: #fbf0bfcb;
     color: #000000;
-    /* black when open */
 }
 
 .collapsible p {
@@ -820,10 +775,9 @@ main {
 
 .collapsible[open] p {
     color: #000000;
-    /* black when open */
 }
 
-/* ==================== RESERVATIONS PAGE ==================== */
+/* RESERVATIONS PAGE */
 
 body {
     background-color: #f3f3f5;
@@ -873,7 +827,7 @@ body {
 }
 
 
-/* ==================== ROOMS PAGE ==================== */
+/* ROOMS PAGE */
 
 body {
     background-color: #f3f3f5;
@@ -1273,7 +1227,6 @@ body {
 }
 
 /* ==================== CONTACT PAGE ==================== */
-/* Scoped under .contact-section to avoid overriding other pages */
 
 .contact-section {
     padding: 60px 0;
@@ -1405,7 +1358,6 @@ body {
     text-decoration: underline;
 }
 
-/* Right-side contact cards */
 .contact-section .contact-info-section {
     display: flex;
     flex-direction: column;
@@ -1604,7 +1556,6 @@ body {
     box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
 }
 
-/* Contact hero image only (height is controlled by shared .hero-section rules) */
 .contactus-hero-bg {
     position: absolute;
     inset: 0;
@@ -1628,7 +1579,7 @@ body {
     }
 }
 
-/* ==================== ROOMS SIMPLE REWORK ==================== */
+/* ROOMS SIMPLE REWORK */
 .rooms-page-simple .rooms-intro-section {
     padding: 44px 0 28px;
 }
@@ -1768,7 +1719,7 @@ body {
     }
 }
 
-/* ==================== SIMPLE RESERVATIONS (NO JS) ==================== */
+/* SIMPLE RESERVATIONS */
 .reservations-page {
     background-color: #f3f3f5;
 }
